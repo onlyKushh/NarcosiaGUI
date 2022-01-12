@@ -13,8 +13,10 @@ local HomeAF = Instance.new("TextButton")
 local NarcoTPIn = Instance.new("ImageLabel")
 local NarcoSettingsIn = Instance.new("ImageLabel")
 local NarcoCredits = Instance.new("TextLabel")
+local NarcocrGradient = Instance.new("UIGradient")
 local NarcoPlayerIn = Instance.new("ImageLabel")
 local NarcoName = Instance.new("TextLabel")
+local NarcoNameGradient = Instance.new("UIGradient")
 local NarcoNameArrow1 = Instance.new("ImageLabel")
 local NarcoNameArrow2 = Instance.new("ImageLabel")
 local NarcoNameArrow3 = Instance.new("ImageLabel")
@@ -44,6 +46,7 @@ local LogsClose = Instance.new("ImageLabel")
 local LogsCloseBtn = Instance.new("TextButton")
 local NarcoLogin = Instance.new("ImageLabel")
 local LoginName = Instance.new("TextLabel")
+local LoginNameGradient = Instance.new("UIGradient")
 local LoginBox = Instance.new("TextBox")
 local LoginBtn = Instance.new("ImageLabel")
 local LoginSend = Instance.new("TextButton")
@@ -63,6 +66,7 @@ NarcoMain.Image = "rbxassetid://3570695787"
 NarcoMain.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
 NarcoMain.ScaleType = Enum.ScaleType.Slice
 NarcoMain.SliceCenter = Rect.new(100, 100, 100, 100)
+NarcoMain.SliceScale = 0.040
 
 NarcoInScd1.Name = "NarcoInScd1"
 NarcoInScd1.Parent = NarcoMain
@@ -77,6 +81,7 @@ NarcoInScd1.Image = "rbxassetid://3570695787"
 NarcoInScd1.ImageColor3 = Color3.new(0.156863, 0.156863, 0.156863)
 NarcoInScd1.ScaleType = Enum.ScaleType.Slice
 NarcoInScd1.SliceCenter = Rect.new(100, 100, 100, 100)
+NarcoInScd1.SliceScale = 0.020
 
 HomeBtn.Name = "HomeBtn"
 HomeBtn.Parent = NarcoInScd1
@@ -130,6 +135,7 @@ NarcoHomeIn.Image = "rbxassetid://3570695787"
 NarcoHomeIn.ImageColor3 = Color3.new(0.156863, 0.156863, 0.156863)
 NarcoHomeIn.ScaleType = Enum.ScaleType.Slice
 NarcoHomeIn.SliceCenter = Rect.new(100, 100, 100, 100)
+NarcoHomeIn.SliceScale = 0.020
 
 HomeRainAutoFarm.Name = "HomeRainAutoFarm"
 HomeRainAutoFarm.Parent = NarcoHomeIn
@@ -141,6 +147,7 @@ HomeRainAutoFarm.Image = "rbxassetid://3570695787"
 HomeRainAutoFarm.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
 HomeRainAutoFarm.ScaleType = Enum.ScaleType.Slice
 HomeRainAutoFarm.SliceCenter = Rect.new(100, 100, 100, 100)
+HomeRainAutoFarm.SliceScale = 0.030
 
 HomeRAF.Name = "HomeRAF"
 HomeRAF.Parent = HomeRainAutoFarm
@@ -162,6 +169,7 @@ HomeAutoFarm.Image = "rbxassetid://3570695787"
 HomeAutoFarm.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
 HomeAutoFarm.ScaleType = Enum.ScaleType.Slice
 HomeAutoFarm.SliceCenter = Rect.new(100, 100, 100, 100)
+HomeAutoFarm.SliceScale = 0.030
 
 HomeAF.Name = "HomeAF"
 HomeAF.Parent = HomeAutoFarm
@@ -186,6 +194,7 @@ NarcoTPIn.Image = "rbxassetid://3570695787"
 NarcoTPIn.ImageColor3 = Color3.new(0.156863, 0.156863, 0.156863)
 NarcoTPIn.ScaleType = Enum.ScaleType.Slice
 NarcoTPIn.SliceCenter = Rect.new(100, 100, 100, 100)
+NarcoTPIn.SliceScale = 0.020
 
 NarcoSettingsIn.Name = "NarcoSettingsIn"
 NarcoSettingsIn.Parent = NarcoMain
@@ -200,6 +209,7 @@ NarcoSettingsIn.Image = "rbxassetid://3570695787"
 NarcoSettingsIn.ImageColor3 = Color3.new(0.156863, 0.156863, 0.156863)
 NarcoSettingsIn.ScaleType = Enum.ScaleType.Slice
 NarcoSettingsIn.SliceCenter = Rect.new(100, 100, 100, 100)
+NarcoSettingsIn.SliceScale = 0.020
 
 NarcoCredits.Name = "NarcoCredits"
 NarcoCredits.Parent = NarcoSettingsIn
@@ -212,6 +222,10 @@ NarcoCredits.Font = Enum.Font.GothamBold
 NarcoCredits.Text = "AutoFarms by BeastBoyReee"
 NarcoCredits.TextColor3 = Color3.new(0.588235, 0.196078, 1)
 NarcoCredits.TextSize = 15
+
+NarcocrGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(150, 50, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 0, 164)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(150, 50, 255))}
+NarcocrGradient.Name = "NarcocrGradient"
+NarcocrGradient.Parent = NarcoCredits
 
 NarcoPlayerIn.Name = "NarcoPlayerIn"
 NarcoPlayerIn.Parent = NarcoMain
@@ -226,6 +240,7 @@ NarcoPlayerIn.Image = "rbxassetid://3570695787"
 NarcoPlayerIn.ImageColor3 = Color3.new(0.156863, 0.156863, 0.156863)
 NarcoPlayerIn.ScaleType = Enum.ScaleType.Slice
 NarcoPlayerIn.SliceCenter = Rect.new(100, 100, 100, 100)
+NarcoPlayerIn.SliceScale = 0.020
 
 NarcoName.Name = "NarcoName"
 NarcoName.Parent = NarcoMain
@@ -238,6 +253,10 @@ NarcoName.Font = Enum.Font.GothamBold
 NarcoName.Text = "NARCOSIA"
 NarcoName.TextColor3 = Color3.new(0.588235, 0.196078, 1)
 NarcoName.TextSize = 30
+
+NarcoNameGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(150, 50, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 247)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(150, 50, 255))}
+NarcoNameGradient.Name = "NarcoNameGradient"
+NarcoNameGradient.Parent = NarcoName
 
 NarcoNameArrow1.Name = "NarcoNameArrow1"
 NarcoNameArrow1.Parent = NarcoMain
@@ -406,6 +425,7 @@ NarcoChangelogs.Image = "rbxassetid://3570695787"
 NarcoChangelogs.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
 NarcoChangelogs.ScaleType = Enum.ScaleType.Slice
 NarcoChangelogs.SliceCenter = Rect.new(100, 100, 100, 100)
+NarcoChangelogs.SliceScale = 0.040
 
 NarcoName_2.Name = "NarcoName"
 NarcoName_2.Parent = NarcoChangelogs
@@ -439,6 +459,7 @@ NarcoChangelogsIn.Image = "rbxassetid://3570695787"
 NarcoChangelogsIn.ImageColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
 NarcoChangelogsIn.ScaleType = Enum.ScaleType.Slice
 NarcoChangelogsIn.SliceCenter = Rect.new(100, 100, 100, 100)
+NarcoChangelogsIn.SliceScale = 0.030
 
 Version.Name = "Version"
 Version.Parent = NarcoChangelogsIn
@@ -556,6 +577,7 @@ NarcoLogin.Image = "rbxassetid://3570695787"
 NarcoLogin.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
 NarcoLogin.ScaleType = Enum.ScaleType.Slice
 NarcoLogin.SliceCenter = Rect.new(100, 100, 100, 100)
+NarcoLogin.SliceScale = 0.050
 
 LoginName.Name = "LoginName"
 LoginName.Parent = NarcoLogin
@@ -569,6 +591,10 @@ LoginName.Text = "NARCOSIA"
 LoginName.TextColor3 = Color3.new(0.588235, 0.196078, 1)
 LoginName.TextSize = 30
 LoginName.TextTransparency = 1
+
+LoginNameGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(150, 50, 255)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 247)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(150, 50, 255))}
+LoginNameGradient.Name = "LoginNameGradient"
+LoginNameGradient.Parent = LoginName
 
 LoginBox.Name = "LoginBox"
 LoginBox.Parent = NarcoLogin
@@ -598,6 +624,7 @@ LoginBtn.Image = "rbxassetid://3570695787"
 LoginBtn.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
 LoginBtn.ScaleType = Enum.ScaleType.Slice
 LoginBtn.SliceCenter = Rect.new(100, 100, 100, 100)
+LoginBtn.SliceScale = 0.050
 
 LoginSend.Name = "LoginSend"
 LoginSend.Parent = LoginBtn
