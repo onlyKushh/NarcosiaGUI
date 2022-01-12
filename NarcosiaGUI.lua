@@ -640,35 +640,49 @@ LoginSend.TextSize = 19
 
 local rs = game:GetService("RunService")
 
-local ncr = NarcoCredits
-local gradientncr = ncr.NarcocrGradient
-
-local speed = 1
-rs.RenderStepped:Connect(function(dt)
-	gradientncr.Offset = Vector2.new(gradientncr.Offset.X + (speed*dt), 0)
-	if gradientncr.Offset.X >= 1 then
-		local isRotated = (gradientncr.Rotation == 180)
-		gradientncr.Rotation = isRotated and 0 or 180; gradientncr.Offset = Vector2.new(-1, 0) --isRotated and -0.5 or -1
-	end
-end)
-
-
-
-local nn = NarcoName
-local gradientnn = nn.NarcoNameGradient
-
-local speed = 1
-rs.RenderStepped:Connect(function(dt)
-	gradientnn.Offset = Vector2.new(gradientnn.Offset.X + (speed*dt), 0)
-	if gradientnn.Offset.X >= 1 then
-		local isRotated = (gradientnn.Rotation == 180)
-		gradientnn.Rotation = isRotated and 0 or 180; gradientnn.Offset = Vector2.new(-1, 0) --isRotated and -0.5 or -1
-	end
-end)
-
 local TweenService = game:GetService("TweenService")
 
+wait(0.5)
+NarcoLogin:TweenSize(UDim2.new(0, 254, 0, 100), "In", "Quad", 0.5, true)
+wait(1)
+TweenService:Create(LoginName, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
+TweenService:Create(LoginBox, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
+TweenService:Create(LoginBox, TweenInfo.new(0.3), {BackgroundTransparency = 0}):Play()
+LoginBox.Active = true
 
+wait(0.5)
+LoginBtn:TweenPosition(UDim2.new(0.498, 0, 1.276, 0), "In", "Quad", 0.5, true)
+LoginBtn.Visible = true
+
+
+
+local Player = game:GetService("Players").LocalPlayer
+
+
+LoginBtn.LoginSend.MouseEnter:Connect(function()
+
+	TweenService:Create(LoginSend, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+	LoginBtn:TweenSize(UDim2.new(0, 150, 0, 36), "In", "Quad", 0.1, true)
+
+end)
+
+LoginSend.MouseLeave:Connect(function()
+
+	TweenService:Create(LoginSend, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	LoginBtn:TweenSize(UDim2.new(0, 128, 0, 36), "In", "Quad", 0.1, true)
+
+end)
+
+LoginSend.MouseButton1Click:Connect(function()
+	if LoginBox.Text == "qHYDaLFNVtwKsjVcLpPaTEmNpbduFftZCdFtDJZS" or "yRNpXHJzPvyzSWxMqkdhbrsfCGjpQPSLeeEEkAMb" then
+		NarcoLogin.Visible = false
+		NarcoMain.Visible = true
+	else
+		Player:Kick("Wrong License Key, bye !")
+	end
+
+
+end)
 
 
 -- HOME BUTTON
@@ -893,54 +907,6 @@ game.StarterGui:SetCore("SendNotification",  {
 	Callback = NotificationBindable;
 })
 
--- ARROW ANIMATION --
-
-while true do 
-	
-	TweenService:Create(NarcoNameArrow1, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow14, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow14, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow13, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow13, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow12, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow12, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow11, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow11, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow10, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow10, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow9, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow9, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow8, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow8, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow7, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow7, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow6, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow6, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow5, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow5, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow4, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow4, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow3, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow3, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow2, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-	TweenService:Create(NarcoNameArrow2, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(NarcoNameArrow1, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
-	wait(0.075)
-end
-
 
 getgenv().dump = false -- true/false | on/off
 
@@ -1128,7 +1094,31 @@ UIS.InputBegan:Connect(function(KeyCode)
 end)
 
 
+local ncr = NarcoCredits
+local gradientncr = ncr.NarcocrGradient
 
+local speed = 1
+rs.RenderStepped:Connect(function(dt)
+	gradientncr.Offset = Vector2.new(gradientncr.Offset.X + (speed*dt), 0)
+	if gradientncr.Offset.X >= 1 then
+		local isRotated = (gradientncr.Rotation == 180)
+		gradientncr.Rotation = isRotated and 0 or 180; gradientncr.Offset = Vector2.new(-1, 0) --isRotated and -0.5 or -1
+	end
+end)
+
+
+
+local nn = NarcoName
+local gradientnn = nn.NarcoNameGradient
+
+local speed = 1
+rs.RenderStepped:Connect(function(dt)
+	gradientnn.Offset = Vector2.new(gradientnn.Offset.X + (speed*dt), 0)
+	if gradientnn.Offset.X >= 1 then
+		local isRotated = (gradientnn.Rotation == 180)
+		gradientnn.Rotation = isRotated and 0 or 180; gradientnn.Offset = Vector2.new(-1, 0) --isRotated and -0.5 or -1
+	end
+end)
 
 local ln = NarcoLogin
 local gradientln = ln.LoginName.LoginNameGradient
@@ -1142,47 +1132,50 @@ rs.RenderStepped:Connect(function(dt)
 	end
 end)
 
+-- ARROW ANIMATION --
 
-local Player = game:GetService("Players").LocalPlayer
+while true do 
 
-wait(0.5)
-NarcoLogin:TweenSize(UDim2.new(0, 254, 0, 100), "In", "Quad", 0.5, true)
-wait(1)
-TweenService:Create(LoginName, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
-TweenService:Create(LoginBox, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
-TweenService:Create(LoginBox, TweenInfo.new(0.3), {BackgroundTransparency = 0}):Play()
-LoginBox.Active = true
-
-wait(0.5)
-LoginBtn:TweenPosition(UDim2.new(0.498, 0, 1.276, 0), "In", "Quad", 0.5, true)
-LoginBtn.Visible = true
-
-
-
-
-
-
-LoginBtn.LoginSend.MouseEnter:Connect(function()
-
-	TweenService:Create(LoginSend, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
-	LoginBtn:TweenSize(UDim2.new(0, 150, 0, 36), "In", "Quad", 0.1, true)
-
-end)
-
-LoginSend.MouseLeave:Connect(function()
-
-	TweenService:Create(LoginSend, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
-	LoginBtn:TweenSize(UDim2.new(0, 128, 0, 36), "In", "Quad", 0.1, true)
-
-end)
-
-LoginSend.MouseButton1Click:Connect(function()
-	if LoginBox.Text == "qHYDaLFNVtwKsjVcLpPaTEmNpbduFftZCdFtDJZS" or "yRNpXHJzPvyzSWxMqkdhbrsfCGjpQPSLeeEEkAMb" then
-		NarcoLogin.Visible = false
-		NarcoMain.Visible = true
-	else
-				Player:Kick("Wrong License Key, bye !")
-	end
-	
-
-end)
+	TweenService:Create(NarcoNameArrow1, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow14, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow14, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow13, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow13, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow12, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow12, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow11, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow11, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow10, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow10, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow9, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow9, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow8, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow8, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow7, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow7, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow6, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow6, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow5, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow5, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow4, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow4, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow3, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow3, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow2, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(NarcoNameArrow2, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow1, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+end
