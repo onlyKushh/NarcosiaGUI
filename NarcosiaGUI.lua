@@ -10,6 +10,10 @@ local HomeRainAutoFarm = Instance.new("ImageLabel")
 local HomeRAF = Instance.new("TextButton")
 local HomeAutoFarm = Instance.new("ImageLabel")
 local HomeAF = Instance.new("TextButton")
+local HomeAutoFarmOFF = Instance.new("ImageLabel")
+local HomeAFOFF = Instance.new("TextButton")
+local HomeRainAutoFarmOFF = Instance.new("ImageLabel")
+local HomeRAFOFF = Instance.new("TextButton")
 local NarcoTPIn = Instance.new("ImageLabel")
 local NarcoSettingsIn = Instance.new("ImageLabel")
 local NarcoCredits = Instance.new("TextLabel")
@@ -180,6 +184,50 @@ HomeAF.Font = Enum.Font.Gotham
 HomeAF.Text = "AUTOFARM"
 HomeAF.TextColor3 = Color3.new(0.588235, 0.196078, 1)
 HomeAF.TextSize = 14
+
+HomeAutoFarmOFF.Name = "HomeAutoFarmOFF"
+HomeAutoFarmOFF.Parent = NarcoHomeIn
+HomeAutoFarmOFF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HomeAutoFarmOFF.BackgroundTransparency = 1.000
+HomeAutoFarmOFF.Position = UDim2.new(0.211111113, 0, 0.613197386, 0)
+HomeAutoFarmOFF.Size = UDim2.new(0, 41, 0, 30)
+HomeAutoFarmOFF.Image = "rbxassetid://3570695787"
+HomeAutoFarmOFF.ImageColor3 = Color3.fromRGB(30, 30, 30)
+HomeAutoFarmOFF.ScaleType = Enum.ScaleType.Slice
+HomeAutoFarmOFF.SliceCenter = Rect.new(100, 100, 100, 100)
+HomeAutoFarmOFF.SliceScale = 0.030
+
+HomeAFOFF.Name = "HomeAFOFF"
+HomeAFOFF.Parent = HomeAutoFarmOFF
+HomeAFOFF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HomeAFOFF.BackgroundTransparency = 1.000
+HomeAFOFF.Size = UDim2.new(0, 41, 0, 30)
+HomeAFOFF.Font = Enum.Font.Gotham
+HomeAFOFF.Text = "OFF"
+HomeAFOFF.TextColor3 = Color3.fromRGB(150, 50, 255)
+HomeAFOFF.TextSize = 14.000
+
+HomeRainAutoFarmOFF.Name = "HomeRainAutoFarmOFF"
+HomeRainAutoFarmOFF.Parent = NarcoHomeIn
+HomeRainAutoFarmOFF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HomeRainAutoFarmOFF.BackgroundTransparency = 1.000
+HomeRainAutoFarmOFF.Position = UDim2.new(0.693333328, 0, 0.613197386, 0)
+HomeRainAutoFarmOFF.Size = UDim2.new(0, 41, 0, 30)
+HomeRainAutoFarmOFF.Image = "rbxassetid://3570695787"
+HomeRainAutoFarmOFF.ImageColor3 = Color3.fromRGB(30, 30, 30)
+HomeRainAutoFarmOFF.ScaleType = Enum.ScaleType.Slice
+HomeRainAutoFarmOFF.SliceCenter = Rect.new(100, 100, 100, 100)
+HomeRainAutoFarmOFF.SliceScale = 0.030
+
+HomeRAFOFF.Name = "HomeRAFOFF"
+HomeRAFOFF.Parent = HomeRainAutoFarmOFF
+HomeRAFOFF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HomeRAFOFF.BackgroundTransparency = 1.000
+HomeRAFOFF.Size = UDim2.new(0, 41, 0, 30)
+HomeRAFOFF.Font = Enum.Font.Gotham
+HomeRAFOFF.Text = "OFF"
+HomeRAFOFF.TextColor3 = Color3.fromRGB(150, 50, 255)
+HomeRAFOFF.TextSize = 14.000
 
 NarcoTPIn.Name = "NarcoTPIn"
 NarcoTPIn.Parent = NarcoMain
@@ -992,6 +1040,7 @@ end)
 HomeRAF.MouseButton1Click:Connect(function()
 
 	TweenService:Create(HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+	HomeRAF.TextColor3 = Color3.fromRGB(0, 255, 128)
 	getgenv().rain = true -- true/false | on/off
 
 	if getgenv().rain == true then
@@ -1027,6 +1076,118 @@ HomeRAF.MouseButton1Click:Connect(function()
 		end
 	end
 			
+
+end)
+
+
+HomeRAFOFF.MouseEnter:Connect(function()
+
+	TweenService:Create(HomeRainAutoFarmOFF, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+	TweenService:Create(HomeRAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+
+end)
+
+HomeRAFOFF.MouseLeave:Connect(function()
+
+	TweenService:Create(HomeRainAutoFarmOFF, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(30, 30, 30)}):Play()
+	TweenService:Create(HomeRAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+
+end)
+
+
+HomeRAFOFF.MouseButton1Click:Connect(function()
+
+	TweenService:Create(HomeRAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+	HomeRAF.TextColor3 = Color3.fromRGB(150, 50, 255)
+	HomeRAFOFF.TextColor3 = Color3.fromRGB(0, 255, 128)
+
+	getgenv().rain = false -- true/false | on/off
+
+	if getgenv().rain == true then
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Dump Simulator Autofarm",
+			Text = "Autofarm Has Been Turned To True",
+			Duration = 3
+		})
+		while getgenv().rain == true do
+			for i, v in pairs(game:GetService("Workspace")["rain_drop"]:GetChildren()) do
+				wait()
+
+				if v:IsA("MeshPart") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame + Vector3.new(5, 5, 5)
+					for i = 1, 20 do
+						wait()
+						keypress(0x45)
+					end
+					wait(.5)
+					keyrelease(0x45)
+				end
+			end
+		end
+	end
+
+end)
+
+HomeRAFOFF.MouseEnter:Connect(function()
+
+	TweenService:Create(HomeRainAutoFarmOFF, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+	TweenService:Create(HomeRainAutoFarmOFF.HomeRAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+
+end)
+
+HomeAFOFF.MouseLeave:Connect(function()
+
+	TweenService:Create(HomeAutoFarmOFF, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(30, 30, 30)}):Play()
+	TweenService:Create(HomeAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+
+end)
+
+
+HomeAFOFF.MouseButton1Click:Connect(function()
+
+	TweenService:Create(HomeAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+	HomeRAF.TextColor3 = Color3.fromRGB(150, 50, 255)
+	HomeAFOFF.TextColor3 = Color3.fromRGB(0, 255, 128)
+
+	getgenv().dump = false -- true/false | on/off
+
+	if getgenv().dump == true then
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Activated",
+			Text = "Can't deactivate atm x)",
+			Duration = 3
+		})
+	else
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Deactivated",
+			Text = "Autofarm Has Been Turned To False",
+			Duration = 3
+		})
+	end
+	while getgenv().dump == true do
+		for i, v in pairs(game:GetService("Workspace").recuperation:GetChildren()) do
+			wait()
+			if getgenv().dump == false then
+				return
+			else
+				if
+					game:GetService("Players").LocalPlayer.lstats.backpack.Value >= game:GetService("Players").LocalPlayer.lstats.backpackstorage.Value
+				then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").interactivity.sell.teleport.CFrame
+				else
+					if v:IsA("MeshPart") then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame + Vector3.new(5, 5, 5)
+						for i = 1, 20 do
+							wait()
+							keypress(0x45)
+						end
+						wait(.5)
+						keyrelease(0x45)
+					end
+				end
+			end
+		end
+	end
 
 end)
 
