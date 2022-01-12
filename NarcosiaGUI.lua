@@ -613,7 +613,7 @@ LoginSend.TextSize = 19
 
 local rs = game:GetService("RunService")
 
-local ncr = script.Parent.Parent.NarcoCredits
+local ncr = NarcoCredits
 local gradientncr = ncr.NarcocrGradient
 
 local speed = 1
@@ -627,7 +627,7 @@ end)
 
 
 
-local nn = script.Parent.Parent.NarcoName
+local nn = NarcoName
 local gradientnn = nn.NarcoNameGradient
 
 local speed = 1
@@ -646,152 +646,152 @@ local TweenService = game:GetService("TweenService")
 
 -- HOME BUTTON
 
-script.Parent.NarcoMain.NarcoInScd1.HomeBtn.MouseEnter:Connect(function()
+HomeBtn.MouseEnter:Connect(function()
 	
-	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.HomeBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
-	script.Parent.NarcoMain.NarcoInScd1.HomeBtn:TweenSize(UDim2.new(0, 16, 0, 16), "In", "Quad", 0.1, true)
+	TweenService:Create(HomeBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+	HomeBtn:TweenSize(UDim2.new(0, 16, 0, 16), "In", "Quad", 0.1, true)
 	
 end)
 
-script.Parent.NarcoMain.NarcoInScd1.HomeBtn.MouseLeave:Connect(function()
+HomeBtn.MouseLeave:Connect(function()
 
-	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.HomeBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(150, 50, 255)}):Play()
-	script.Parent.NarcoMain.NarcoInScd1.HomeBtn:TweenSize(UDim2.new(0, 15, 0, 15), "In", "Quad", 0.1, true)
-
-end)
-
-script.Parent.NarcoMain.NarcoInScd1.HomeBtn.MouseButton1Click:Connect(function()
-
-	script.Parent.NarcoMain.NarcoHomeIn.Visible = true
-	script.Parent.NarcoMain.NarcoSettingsIn.Visible = false
-	script.Parent.NarcoMain.NarcoTPIn.Visible = false
-	script.Parent.NarcoMain.NarcoPlayerIn.Visible = false
+	TweenService:Create(HomeBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	HomeBtn:TweenSize(UDim2.new(0, 15, 0, 15), "In", "Quad", 0.1, true)
 
 end)
 
-script.Parent.NarcoMain.NarcoInScd1.HomeBtn.MouseButton1Down:Connect(function()
+HomeBtn.MouseButton1Click:Connect(function()
 
-	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.HomeBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
+	NarcoHomeIn.Visible = true
+	NarcoSettingsIn.Visible = false
+	NarcoTPIn.Visible = false
+	NarcoPlayerIn.Visible = false
+
+end)
+
+HomeBtn.MouseButton1Down:Connect(function()
+
+	TweenService:Create(HomeBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
 
 end)
 
 -- SETTINGS BUTTON
 
-script.Parent.NarcoMain.NarcoInScd1.SettingsBtn.MouseEnter:Connect(function()
+SettingsBtn.MouseEnter:Connect(function()
 
-	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.SettingsBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
-	script.Parent.NarcoMain.NarcoInScd1.SettingsBtn:TweenSize(UDim2.new(0, 16, 0, 16), "In", "Quad", 0.1, true)
-
-end)
-
-script.Parent.NarcoMain.NarcoInScd1.SettingsBtn.MouseLeave:Connect(function()
-
-	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.SettingsBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(150, 50, 255)}):Play()
-	script.Parent.NarcoMain.NarcoInScd1.SettingsBtn:TweenSize(UDim2.new(0, 15, 0, 15), "In", "Quad", 0.1, true)
+	TweenService:Create(SettingsBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+	SettingsBtn:TweenSize(UDim2.new(0, 16, 0, 16), "In", "Quad", 0.1, true)
 
 end)
 
-script.Parent.NarcoMain.NarcoInScd1.SettingsBtn.MouseButton1Click:Connect(function()
+SettingsBtn.MouseLeave:Connect(function()
 
-	script.Parent.NarcoMain.NarcoHomeIn.Visible = false
-	script.Parent.NarcoMain.NarcoSettingsIn.Visible = true
-	script.Parent.NarcoMain.NarcoTPIn.Visible = false
-	script.Parent.NarcoMain.NarcoPlayerIn.Visible = false
+	TweenService:Create(SettingsBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	SettingsBtn:TweenSize(UDim2.new(0, 15, 0, 15), "In", "Quad", 0.1, true)
 
 end)
 
-script.Parent.NarcoMain.NarcoInScd1.SettingsBtn.MouseButton1Down:Connect(function()
+SettingsBtn.MouseButton1Click:Connect(function()
 
-	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.SettingsBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
+	NarcoHomeIn.Visible = false
+	NarcoSettingsIn.Visible = true
+	NarcoTPIn.Visible = false
+	NarcoPlayerIn.Visible = false
+
+end)
+
+SettingsBtn.MouseButton1Down:Connect(function()
+
+	TweenService:Create(SettingsBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
 
 end)
 
 -- TP BUTTON
 
-script.Parent.NarcoMain.NarcoInScd1.TPBtn.MouseEnter:Connect(function()
+TPBtn.MouseEnter:Connect(function()
 
-	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.TPBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
-	script.Parent.NarcoMain.NarcoInScd1.TPBtn:TweenSize(UDim2.new(0, 16, 0, 16), "In", "Quad", 0.1, true)
-
-end)
-
-script.Parent.NarcoMain.NarcoInScd1.TPBtn.MouseLeave:Connect(function()
-
-	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.TPBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(150, 50, 255)}):Play()
-	script.Parent.NarcoMain.NarcoInScd1.TPBtn:TweenSize(UDim2.new(0, 15, 0, 15), "In", "Quad", 0.1, true)
+	TweenService:Create(NarcoInScd1.TPBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+	TPBtn:TweenSize(UDim2.new(0, 16, 0, 16), "In", "Quad", 0.1, true)
 
 end)
 
-script.Parent.NarcoMain.NarcoInScd1.TPBtn.MouseButton1Click:Connect(function()
+TPBtn.MouseLeave:Connect(function()
 
-	script.Parent.NarcoMain.NarcoHomeIn.Visible = false
-	script.Parent.NarcoMain.NarcoSettingsIn.Visible = false
-	script.Parent.NarcoMain.NarcoTPIn.Visible = true
-	script.Parent.NarcoMain.NarcoPlayerIn.Visible = false
+	TweenService:Create(NarcoInScd1.TPBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	TPBtn:TweenSize(UDim2.new(0, 15, 0, 15), "In", "Quad", 0.1, true)
 
 end)
 
-script.Parent.NarcoMain.NarcoInScd1.TPBtn.MouseButton1Down:Connect(function()
+TPBtn.MouseButton1Click:Connect(function()
 
-	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.TPBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
+	NarcoHomeIn.Visible = false
+	NarcoSettingsIn.Visible = false
+	NarcoTPIn.Visible = true
+	NarcoPlayerIn.Visible = false
+
+end)
+
+TPBtn.MouseButton1Down:Connect(function()
+
+	TweenService:Create(TPBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
 
 end)
 
 -- PLAYER BUTTON
 
-script.Parent.NarcoMain.NarcoInScd1.PlayerBtn.MouseEnter:Connect(function()
+PlayerBtn.MouseEnter:Connect(function()
 
-	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.PlayerBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
-	script.Parent.NarcoMain.NarcoInScd1.PlayerBtn:TweenSize(UDim2.new(0, 15, 0, 16), "In", "Quad", 0.1, true)
+	TweenService:Create(PlayerBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+	PlayerBtn:TweenSize(UDim2.new(0, 15, 0, 16), "In", "Quad", 0.1, true)
 
-
-end)
-
-script.Parent.NarcoMain.NarcoInScd1.PlayerBtn.MouseLeave:Connect(function()
-
-	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.PlayerBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(150, 50, 255)}):Play()
-	script.Parent.NarcoMain.NarcoInScd1.PlayerBtn:TweenSize(UDim2.new(0, 14, 0, 15), "In", "Quad", 0.1, true)
 
 end)
 
-script.Parent.NarcoMain.NarcoInScd1.PlayerBtn.MouseButton1Click:Connect(function()
+PlayerBtn.MouseLeave:Connect(function()
 
-	script.Parent.NarcoMain.NarcoHomeIn.Visible = false
-	script.Parent.NarcoMain.NarcoSettingsIn.Visible = false
-	script.Parent.NarcoMain.NarcoTPIn.Visible = false
-	script.Parent.NarcoMain.NarcoPlayerIn.Visible = true
+	TweenService:Create(PlayerBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	PlayerBtn:TweenSize(UDim2.new(0, 14, 0, 15), "In", "Quad", 0.1, true)
 
 end)
 
-script.Parent.NarcoMain.NarcoInScd1.PlayerBtn.MouseButton1Down:Connect(function()
+PlayerBtn.MouseButton1Click:Connect(function()
 
-	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.PlayerBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
+	NarcoHomeIn.Visible = false
+	NarcoSettingsIn.Visible = false
+	NarcoTPIn.Visible = false
+	NarcoPlayerIn.Visible = true
+
+end)
+
+PlayerBtn.MouseButton1Down:Connect(function()
+
+	TweenService:Create(PlayerBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
 	
 end)
 
 -- LOGS CLOSE BUTTON
 
-script.Parent.NarcoMain.LogsClose.LogsCloseBtn.MouseEnter:Connect(function()
+LogsCloseBtn.MouseEnter:Connect(function()
 
-	script.Parent.NarcoMain.LogsClose:TweenSize(UDim2.new(0, 30, 0, 30), "In", "Quad", 0.1, true)
-	TweenService:Create(script.Parent.NarcoMain.LogsClose.LogsCloseBtn, TweenInfo.new(0.1), {TextSize = 20}):Play()
+	LogsClose:TweenSize(UDim2.new(0, 30, 0, 30), "In", "Quad", 0.1, true)
+	TweenService:Create(LogsCloseBtn, TweenInfo.new(0.1), {TextSize = 20}):Play()
 
-
-end)
-
-script.Parent.NarcoMain.LogsClose.LogsCloseBtn.MouseLeave:Connect(function()
-
-	script.Parent.NarcoMain.LogsClose:TweenSize(UDim2.new(0, 25, 0, 25), "In", "Quad", 0.1, true)
-	TweenService:Create(script.Parent.NarcoMain.LogsClose.LogsCloseBtn, TweenInfo.new(0.1), {TextSize = 12}):Play()
 
 end)
 
-script.Parent.NarcoMain.LogsClose.LogsCloseBtn.MouseButton1Click:Connect(function()
+LogsCloseBtn.MouseLeave:Connect(function()
 
-	script.Parent.NarcoMain.NarcoChangelogs:TweenPosition(UDim2.new(-0.216, 0, 2.1, 0), "In", "Quad", 0.1, true)
+	LogsClose:TweenSize(UDim2.new(0, 25, 0, 25), "In", "Quad", 0.1, true)
+	TweenService:Create(LogsCloseBtn, TweenInfo.new(0.1), {TextSize = 12}):Play()
+
+end)
+
+LogsCloseBtn.MouseButton1Click:Connect(function()
+
+	NarcoChangelogs:TweenPosition(UDim2.new(-0.216, 0, 2.1, 0), "In", "Quad", 0.1, true)
 	wait(0.1)
-	script.Parent.NarcoMain.LogsClose.Visible = false
-	script.Parent.NarcoMain.NarcoChangelogs.Visible = false
+	LogsClose.Visible = false
+	NarcoChangelogs.Visible = false
 
 end)
 
@@ -870,47 +870,47 @@ game.StarterGui:SetCore("SendNotification",  {
 
 while true do 
 	
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow1, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow14, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow1, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow14, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow14, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow13, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow14, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow13, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow13, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow12, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow13, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow12, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow12, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow11, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow12, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow11, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow11, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow10, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow11, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow10, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow10, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow9, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow10, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow9, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow9, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow8, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow9, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow8, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow8, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow7, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow8, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow7, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow7, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow6, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow7, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow6, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow6, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow5, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow6, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow5, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow5, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow4, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow5, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow4, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow4, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow3, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow4, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow3, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow3, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow2, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow3, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow2, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow2, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow1, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	TweenService:Create(NarcoNameArrow2, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(NarcoNameArrow1, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
 end
 
@@ -919,23 +919,23 @@ getgenv().dump = false -- true/false | on/off
 
 --AUTOFARM
 
-script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm.HomeAF.MouseEnter:Connect(function()
+HomeAF.MouseEnter:Connect(function()
 
-	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm.HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
-
-end)
-
-script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm.HomeAF.MouseLeave:Connect(function()
-
-	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(30, 30, 30)}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm.HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	TweenService:Create(HomeAutoFarm, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+	TweenService:Create(HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
 
 end)
 
-script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm.HomeAF.MouseButton1Click:Connect(function()
+HomeAF.MouseLeave:Connect(function()
+
+	TweenService:Create(HomeAutoFarm, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(30, 30, 30)}):Play()
+	TweenService:Create(HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+
+end)
+
+HomeAF.MouseButton1Click:Connect(function()
 	
-	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm.HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+	TweenService:Create(HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
 while true do
 	if getgenv().dump == true then
 		game.StarterGui:SetCore("SendNotification", {
@@ -968,7 +968,7 @@ while true do
 		else if getgenv().dump == false then
 			
 		return
-					TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+					TweenService:Create(HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
 			end
 		end
 		end
@@ -978,24 +978,24 @@ end)
 
 --RAINFARM
 
-script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF.MouseEnter:Connect(function()
+HomeRAF.MouseEnter:Connect(function()
 
-	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
-
-end)
-
-script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF.MouseLeave:Connect(function()
-
-	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(30, 30, 30)}):Play()
-	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	TweenService:Create(HomeRainAutoFarm, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+	TweenService:Create(HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
 
 end)
 
+HomeRAF.MouseLeave:Connect(function()
 
-script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF.MouseButton1Click:Connect(function()
+	TweenService:Create(HomeRainAutoFarm, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(30, 30, 30)}):Play()
+	TweenService:Create(HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
 
-	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+end)
+
+
+HomeRAF.MouseButton1Click:Connect(function()
+
+	TweenService:Create(HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
 	while true do
 		
 		getgenv().rain = false -- true/false | on/off
@@ -1027,7 +1027,7 @@ script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF.MouseButton1Click:C
 		else if getgenv().rain == false then
 
 		return
-			TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+			TweenService:Create(HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
 
 	end
 	
@@ -1040,7 +1040,7 @@ end)
 
 local UserInputService = game:GetService("UserInputService")
 
-local gui = script.Parent.NarcoMain
+local gui = NarcoMain
 
 local dragging
 local dragInput
@@ -1078,11 +1078,11 @@ UserInputService.InputChanged:Connect(function(input)
 	end
 end)
 
-local narcomainkey = script.Parent.NarcoMain
+local narcomainkey = NarcoMain
 local on = false
 
-local posoff = UDim2.new(0, script.Parent.NarcoMain.AbsolutePosition.X, 1.5, script.Parent.NarcoMain.AbsolutePosition.Y)
-local poson =  UDim2.new(0, script.Parent.NarcoMain.AbsolutePosition.X, 0, script.Parent.NarcoMain.AbsolutePosition.Y)
+local posoff = UDim2.new(0, NarcoMain.AbsolutePosition.X, 1.5, NarcoMain.AbsolutePosition.Y)
+local poson =  UDim2.new(0, NarcoMain.AbsolutePosition.X, 0, NarcoMain.AbsolutePosition.Y)
 
 local UIS =game:GetService("UserInputService")
 
@@ -1103,7 +1103,7 @@ end)
 
 
 
-local ln = script.Parent.Parent.Parent.NarcoLogin
+local ln = NarcoLogin
 local gradientln = ln.LoginName.LoginNameGradient
 
 local speed = 1
@@ -1119,40 +1119,40 @@ end)
 local Player = game:GetService("Players").LocalPlayer
 
 wait(0.5)
-script.Parent.Parent.NarcoLogin:TweenSize(UDim2.new(0, 254, 0, 100), "In", "Quad", 0.5, true)
+NarcoLogin:TweenSize(UDim2.new(0, 254, 0, 100), "In", "Quad", 0.5, true)
 wait(1)
-TweenService:Create(script.Parent.LoginName, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
-TweenService:Create(script.Parent.LoginBox, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
-TweenService:Create(script.Parent.LoginBox, TweenInfo.new(0.3), {BackgroundTransparency = 0}):Play()
-script.Parent.LoginBox.Active = true
+TweenService:Create(LoginName, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
+TweenService:Create(LoginBox, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
+TweenService:Create(LoginBox, TweenInfo.new(0.3), {BackgroundTransparency = 0}):Play()
+LoginBox.Active = true
 
 wait(0.5)
-script.Parent.LoginBtn:TweenPosition(UDim2.new(0.498, 0, 1.276, 0), "In", "Quad", 0.5, true)
-script.Parent.LoginBtn.Visible = true
+LoginBtn:TweenPosition(UDim2.new(0.498, 0, 1.276, 0), "In", "Quad", 0.5, true)
+LoginBtn.Visible = true
 
 
 
 
 
 
-script.Parent.LoginBtn.LoginSend.MouseEnter:Connect(function()
+LoginBtn.LoginSend.MouseEnter:Connect(function()
 
-	TweenService:Create(script.Parent.LoginBtn.LoginSend, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
-	script.Parent.LoginBtn:TweenSize(UDim2.new(0, 150, 0, 36), "In", "Quad", 0.1, true)
-
-end)
-
-script.Parent.LoginBtn.LoginSend.MouseLeave:Connect(function()
-
-	TweenService:Create(script.Parent.LoginBtn.LoginSend, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
-	script.Parent.LoginBtn:TweenSize(UDim2.new(0, 128, 0, 36), "In", "Quad", 0.1, true)
+	TweenService:Create(LoginSend, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+	LoginBtn:TweenSize(UDim2.new(0, 150, 0, 36), "In", "Quad", 0.1, true)
 
 end)
 
-script.Parent.LoginBtn.LoginSend.MouseButton1Click:Connect(function()
-	if script.Parent.LoginBox.Text == "qHYDaLFNVtwKsjVcLpPaTEmNpbduFftZCdFtDJZS" or "yRNpXHJzPvyzSWxMqkdhbrsfCGjpQPSLeeEEkAMb" then
-		script.Parent.Parent.NarcoLogin.Visible = false
-		script.Parent.Parent.NarcoMain.Visible = true
+LoginSend.MouseLeave:Connect(function()
+
+	TweenService:Create(LoginSend, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	LoginBtn:TweenSize(UDim2.new(0, 128, 0, 36), "In", "Quad", 0.1, true)
+
+end)
+
+LoginSend.MouseButton1Click:Connect(function()
+	if LoginBox.Text == "qHYDaLFNVtwKsjVcLpPaTEmNpbduFftZCdFtDJZS" or "yRNpXHJzPvyzSWxMqkdhbrsfCGjpQPSLeeEEkAMb" then
+		NarcoLogin.Visible = false
+		NarcoMain.Visible = true
 	else
 				Player:Kick("Wrong License Key, bye !")
 	end
