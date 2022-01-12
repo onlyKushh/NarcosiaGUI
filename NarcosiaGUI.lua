@@ -611,6 +611,7 @@ LoginBox.Text = ""
 LoginBox.TextColor3 = Color3.new(0, 0, 0)
 LoginBox.TextSize = 14
 LoginBox.TextTransparency = 1
+LoginBox.TextTruncate = "AtEnd"
 
 LoginBtn.Name = "LoginBtn"
 LoginBtn.Parent = NarcoLogin
@@ -929,17 +930,27 @@ end)
 HomeAF.MouseButton1Click:Connect(function()
 	
 	TweenService:Create(HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
-while true do
+	getgenv().dump = true -- true/false | on/off
+
 	if getgenv().dump == true then
 		game.StarterGui:SetCore("SendNotification", {
-			Title = "Actived",
-			Text = "Click again to stop it.",
+			Title = "Activated",
+			Text = "Can't deactivate atm x)",
 			Duration = 3
 		})
+	else
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Deactivated",
+			Text = "Autofarm Has Been Turned To False",
+			Duration = 3
+		})
+	end
 	while getgenv().dump == true do
 		for i, v in pairs(game:GetService("Workspace").recuperation:GetChildren()) do
 			wait()
-			
+			if getgenv().dump == false then
+				return
+			else
 				if
 					game:GetService("Players").LocalPlayer.lstats.backpack.Value >= game:GetService("Players").LocalPlayer.lstats.backpackstorage.Value
 				then
@@ -957,15 +968,7 @@ while true do
 				end
 			end
 		end
-
-		else if getgenv().dump == false then
-			
-		return
-					TweenService:Create(HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
-			end
-		end
-		end
-	
+	end
 end)
 
 
@@ -989,45 +992,42 @@ end)
 HomeRAF.MouseButton1Click:Connect(function()
 
 	TweenService:Create(HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
-	while true do
-		
-		getgenv().rain = false -- true/false | on/off
+	getgenv().rain = true -- true/false | on/off
 
-		if getgenv().rain == true then
-			game.StarterGui:SetCore("SendNotification", {
-				Title = "Dump Simulator Autofarm",
-				Text = "Autofarm Has Been Turned To True",
-				Duration = 3
-			})
-		while getgenv().rain == true do
-			for i, v in pairs(game:GetService("Workspace")["rain_drop"]:GetChildren()) do
-				wait()
-			
-					if v:IsA("MeshPart") then
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame + Vector3.new(5, 5, 5)
-						for i = 1, 20 do
-							wait()
-							keypress(0x45)
-						end
-						wait(.5)
-						keyrelease(0x45)
+	if getgenv().rain == true then
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Activated",
+			Text = "Can't deactivate atm x)",
+			Duration = 3
+		})
+	else
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Deactivated",
+			Text = "Autofarm Has Been Turned To False",
+			Duration = 3
+		})
+	end
+	while getgenv().rain == true do
+		for i, v in pairs(game:GetService("Workspace")["rain_drop"]:GetChildren()) do
+			wait()
+			if getgenv().rain == false then
+				return
+			else
+
+				if v:IsA("MeshPart") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame + Vector3.new(5, 5, 5)
+					for i = 1, 20 do
+						wait()
+						keypress(0x45)
 					end
+					wait(.5)
+					keyrelease(0x45)
 				end
 			end
-
-
-		
-		else if getgenv().rain == false then
-
-		return
-			TweenService:Create(HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
-
+		end
 	end
-	
-	end
+			
 
-
-end
 end)
 
 
