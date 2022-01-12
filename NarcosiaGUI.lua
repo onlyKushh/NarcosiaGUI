@@ -1,0 +1,1161 @@
+local NarcoGUI = Instance.new("ScreenGui")
+local NarcoMain = Instance.new("ImageLabel")
+local NarcoInScd1 = Instance.new("ImageLabel")
+local HomeBtn = Instance.new("ImageButton")
+local SettingsBtn = Instance.new("ImageButton")
+local TPBtn = Instance.new("ImageButton")
+local PlayerBtn = Instance.new("ImageButton")
+local NarcoHomeIn = Instance.new("ImageLabel")
+local HomeRainAutoFarm = Instance.new("ImageLabel")
+local HomeRAF = Instance.new("TextButton")
+local HomeAutoFarm = Instance.new("ImageLabel")
+local HomeAF = Instance.new("TextButton")
+local NarcoTPIn = Instance.new("ImageLabel")
+local NarcoSettingsIn = Instance.new("ImageLabel")
+local NarcoCredits = Instance.new("TextLabel")
+local NarcoPlayerIn = Instance.new("ImageLabel")
+local NarcoName = Instance.new("TextLabel")
+local NarcoNameArrow1 = Instance.new("ImageLabel")
+local NarcoNameArrow2 = Instance.new("ImageLabel")
+local NarcoNameArrow3 = Instance.new("ImageLabel")
+local NarcoNameArrow4 = Instance.new("ImageLabel")
+local NarcoNameArrow5 = Instance.new("ImageLabel")
+local NarcoNameArrow6 = Instance.new("ImageLabel")
+local NarcoNameArrow7 = Instance.new("ImageLabel")
+local NarcoNameArrow12 = Instance.new("ImageLabel")
+local NarcoNameArrow8 = Instance.new("ImageLabel")
+local NarcoNameArrow11 = Instance.new("ImageLabel")
+local NarcoNameArrow9 = Instance.new("ImageLabel")
+local NarcoNameArrow10 = Instance.new("ImageLabel")
+local NarcoNameArrow13 = Instance.new("ImageLabel")
+local NarcoNameArrow14 = Instance.new("ImageLabel")
+local NarcoChangelogs = Instance.new("ImageLabel")
+local NarcoName_2 = Instance.new("TextLabel")
+local NarcoLogsWave = Instance.new("ImageLabel")
+local NarcoChangelogsIn = Instance.new("ImageLabel")
+local Version = Instance.new("TextLabel")
+local LogArg1 = Instance.new("TextLabel")
+local LogArg2 = Instance.new("TextLabel")
+local LogArg3 = Instance.new("TextLabel")
+local LogArgnega1 = Instance.new("TextLabel")
+local LogArgsoon1 = Instance.new("TextLabel")
+local LogArgsoon2 = Instance.new("TextLabel")
+local LogsClose = Instance.new("ImageLabel")
+local LogsCloseBtn = Instance.new("TextButton")
+local NarcoLogin = Instance.new("ImageLabel")
+local LoginName = Instance.new("TextLabel")
+local LoginBox = Instance.new("TextBox")
+local LoginBtn = Instance.new("ImageLabel")
+local LoginSend = Instance.new("TextButton")
+ 
+NarcoGUI.Name = "NarcoGUI"
+NarcoGUI.Parent = game.CoreGui
+
+NarcoMain.Name = "NarcoMain"
+NarcoMain.Parent = NarcoGUI
+NarcoMain.AnchorPoint = Vector2.new(0.5, 0.5)
+NarcoMain.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoMain.BackgroundTransparency = 1
+NarcoMain.Position = UDim2.new(0.5, 0, 0.5, 0)
+NarcoMain.Size = UDim2.new(0, 500, 0, 300)
+NarcoMain.Visible = false
+NarcoMain.Image = "rbxassetid://3570695787"
+NarcoMain.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+NarcoMain.ScaleType = Enum.ScaleType.Slice
+NarcoMain.SliceCenter = Rect.new(100, 100, 100, 100)
+
+NarcoInScd1.Name = "NarcoInScd1"
+NarcoInScd1.Parent = NarcoMain
+NarcoInScd1.AnchorPoint = Vector2.new(0.5, 0.5)
+NarcoInScd1.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoInScd1.BackgroundTransparency = 1
+NarcoInScd1.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+NarcoInScd1.ClipsDescendants = true
+NarcoInScd1.Position = UDim2.new(0.0419999994, 0, 0.501999974, 0)
+NarcoInScd1.Size = UDim2.new(0, 30, 0, 288)
+NarcoInScd1.Image = "rbxassetid://3570695787"
+NarcoInScd1.ImageColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+NarcoInScd1.ScaleType = Enum.ScaleType.Slice
+NarcoInScd1.SliceCenter = Rect.new(100, 100, 100, 100)
+
+HomeBtn.Name = "HomeBtn"
+HomeBtn.Parent = NarcoInScd1
+HomeBtn.AnchorPoint = Vector2.new(0.5, 0.5)
+HomeBtn.BackgroundColor3 = Color3.new(1, 1, 1)
+HomeBtn.BackgroundTransparency = 1
+HomeBtn.Position = UDim2.new(0.494666666, 0, 0.0547777787, 0)
+HomeBtn.Size = UDim2.new(0, 15, 0, 15)
+HomeBtn.Image = "rbxassetid://6574780989"
+HomeBtn.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+
+SettingsBtn.Name = "SettingsBtn"
+SettingsBtn.Parent = NarcoInScd1
+SettingsBtn.AnchorPoint = Vector2.new(0.5, 0.5)
+SettingsBtn.BackgroundColor3 = Color3.new(1, 1, 1)
+SettingsBtn.BackgroundTransparency = 1
+SettingsBtn.Position = UDim2.new(0.494666666, 0, 0.944388151, 0)
+SettingsBtn.Size = UDim2.new(0, 15, 0, 15)
+SettingsBtn.Image = "rbxassetid://5170344366"
+SettingsBtn.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+
+TPBtn.Name = "TPBtn"
+TPBtn.Parent = NarcoInScd1
+TPBtn.AnchorPoint = Vector2.new(0.5, 0.5)
+TPBtn.BackgroundColor3 = Color3.new(1, 1, 1)
+TPBtn.BackgroundTransparency = 1
+TPBtn.Position = UDim2.new(0.494666666, 0, 0.138967842, 0)
+TPBtn.Size = UDim2.new(0, 15, 0, 15)
+TPBtn.Image = "rbxassetid://5170344777"
+TPBtn.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+
+PlayerBtn.Name = "PlayerBtn"
+PlayerBtn.Parent = NarcoInScd1
+PlayerBtn.AnchorPoint = Vector2.new(0.5, 0.5)
+PlayerBtn.BackgroundColor3 = Color3.new(1, 1, 1)
+PlayerBtn.BackgroundTransparency = 1
+PlayerBtn.Position = UDim2.new(0.494666696, 0, 0.229876935, 0)
+PlayerBtn.Size = UDim2.new(0, 14, 0, 15)
+PlayerBtn.Image = "rbxassetid://5170343816"
+PlayerBtn.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+
+NarcoHomeIn.Name = "NarcoHomeIn"
+NarcoHomeIn.Parent = NarcoMain
+NarcoHomeIn.AnchorPoint = Vector2.new(0.5, 0.5)
+NarcoHomeIn.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoHomeIn.BackgroundTransparency = 1
+NarcoHomeIn.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+NarcoHomeIn.Position = UDim2.new(0.536000013, 0, 0.582037747, 0)
+NarcoHomeIn.Size = UDim2.new(0, 450, 0, 239)
+NarcoHomeIn.Image = "rbxassetid://3570695787"
+NarcoHomeIn.ImageColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+NarcoHomeIn.ScaleType = Enum.ScaleType.Slice
+NarcoHomeIn.SliceCenter = Rect.new(100, 100, 100, 100)
+
+HomeRainAutoFarm.Name = "HomeRainAutoFarm"
+HomeRainAutoFarm.Parent = NarcoHomeIn
+HomeRainAutoFarm.BackgroundColor3 = Color3.new(1, 1, 1)
+HomeRainAutoFarm.BackgroundTransparency = 1
+HomeRainAutoFarm.Position = UDim2.new(0.597777784, 0, 0.445833325, 0)
+HomeRainAutoFarm.Size = UDim2.new(0, 128, 0, 30)
+HomeRainAutoFarm.Image = "rbxassetid://3570695787"
+HomeRainAutoFarm.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+HomeRainAutoFarm.ScaleType = Enum.ScaleType.Slice
+HomeRainAutoFarm.SliceCenter = Rect.new(100, 100, 100, 100)
+
+HomeRAF.Name = "HomeRAF"
+HomeRAF.Parent = HomeRainAutoFarm
+HomeRAF.BackgroundColor3 = Color3.new(1, 1, 1)
+HomeRAF.BackgroundTransparency = 1
+HomeRAF.Size = UDim2.new(0, 128, 0, 30)
+HomeRAF.Font = Enum.Font.Gotham
+HomeRAF.Text = "RAINFARM"
+HomeRAF.TextColor3 = Color3.new(0.588235, 0.196078, 1)
+HomeRAF.TextSize = 14
+
+HomeAutoFarm.Name = "HomeAutoFarm"
+HomeAutoFarm.Parent = NarcoHomeIn
+HomeAutoFarm.BackgroundColor3 = Color3.new(1, 1, 1)
+HomeAutoFarm.BackgroundTransparency = 1
+HomeAutoFarm.Position = UDim2.new(0.11555554, 0, 0.445833325, 0)
+HomeAutoFarm.Size = UDim2.new(0, 128, 0, 30)
+HomeAutoFarm.Image = "rbxassetid://3570695787"
+HomeAutoFarm.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+HomeAutoFarm.ScaleType = Enum.ScaleType.Slice
+HomeAutoFarm.SliceCenter = Rect.new(100, 100, 100, 100)
+
+HomeAF.Name = "HomeAF"
+HomeAF.Parent = HomeAutoFarm
+HomeAF.BackgroundColor3 = Color3.new(1, 1, 1)
+HomeAF.BackgroundTransparency = 1
+HomeAF.Size = UDim2.new(0, 128, 0, 30)
+HomeAF.Font = Enum.Font.Gotham
+HomeAF.Text = "AUTOFARM"
+HomeAF.TextColor3 = Color3.new(0.588235, 0.196078, 1)
+HomeAF.TextSize = 14
+
+NarcoTPIn.Name = "NarcoTPIn"
+NarcoTPIn.Parent = NarcoMain
+NarcoTPIn.AnchorPoint = Vector2.new(0.5, 0.5)
+NarcoTPIn.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoTPIn.BackgroundTransparency = 1
+NarcoTPIn.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+NarcoTPIn.Position = UDim2.new(0.536000013, 0, 0.582852185, 0)
+NarcoTPIn.Size = UDim2.new(0, 450, 0, 239)
+NarcoTPIn.Visible = false
+NarcoTPIn.Image = "rbxassetid://3570695787"
+NarcoTPIn.ImageColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+NarcoTPIn.ScaleType = Enum.ScaleType.Slice
+NarcoTPIn.SliceCenter = Rect.new(100, 100, 100, 100)
+
+NarcoSettingsIn.Name = "NarcoSettingsIn"
+NarcoSettingsIn.Parent = NarcoMain
+NarcoSettingsIn.AnchorPoint = Vector2.new(0.5, 0.5)
+NarcoSettingsIn.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoSettingsIn.BackgroundTransparency = 1
+NarcoSettingsIn.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+NarcoSettingsIn.Position = UDim2.new(0.536000013, 0, 0.582852185, 0)
+NarcoSettingsIn.Size = UDim2.new(0, 450, 0, 239)
+NarcoSettingsIn.Visible = false
+NarcoSettingsIn.Image = "rbxassetid://3570695787"
+NarcoSettingsIn.ImageColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+NarcoSettingsIn.ScaleType = Enum.ScaleType.Slice
+NarcoSettingsIn.SliceCenter = Rect.new(100, 100, 100, 100)
+
+NarcoCredits.Name = "NarcoCredits"
+NarcoCredits.Parent = NarcoSettingsIn
+NarcoCredits.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoCredits.BackgroundTransparency = 1
+NarcoCredits.BorderSizePixel = 0
+NarcoCredits.Position = UDim2.new(0.216888845, 0, 0.885891736, 0)
+NarcoCredits.Size = UDim2.new(0, 217, 0, 22)
+NarcoCredits.Font = Enum.Font.GothamBold
+NarcoCredits.Text = "AutoFarms by BeastBoyReee"
+NarcoCredits.TextColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoCredits.TextSize = 15
+
+NarcoPlayerIn.Name = "NarcoPlayerIn"
+NarcoPlayerIn.Parent = NarcoMain
+NarcoPlayerIn.AnchorPoint = Vector2.new(0.5, 0.5)
+NarcoPlayerIn.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoPlayerIn.BackgroundTransparency = 1
+NarcoPlayerIn.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+NarcoPlayerIn.Position = UDim2.new(0.536000013, 0, 0.582852185, 0)
+NarcoPlayerIn.Size = UDim2.new(0, 450, 0, 239)
+NarcoPlayerIn.Visible = false
+NarcoPlayerIn.Image = "rbxassetid://3570695787"
+NarcoPlayerIn.ImageColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+NarcoPlayerIn.ScaleType = Enum.ScaleType.Slice
+NarcoPlayerIn.SliceCenter = Rect.new(100, 100, 100, 100)
+
+NarcoName.Name = "NarcoName"
+NarcoName.Parent = NarcoMain
+NarcoName.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoName.BackgroundTransparency = 1
+NarcoName.BorderSizePixel = 0
+NarcoName.Position = UDim2.new(0.0457777381, 0, 0.0143055562, 0)
+NarcoName.Size = UDim2.new(0, 200, 0, 50)
+NarcoName.Font = Enum.Font.GothamBold
+NarcoName.Text = "NARCOSIA"
+NarcoName.TextColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoName.TextSize = 30
+
+NarcoNameArrow1.Name = "NarcoNameArrow1"
+NarcoNameArrow1.Parent = NarcoMain
+NarcoNameArrow1.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow1.BackgroundTransparency = 1
+NarcoNameArrow1.Position = UDim2.new(0.418000013, 0, 0.0659999996, 0)
+NarcoNameArrow1.Rotation = 90
+NarcoNameArrow1.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow1.Image = "rbxassetid://5200714577"
+NarcoNameArrow1.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow1.ImageTransparency = 1
+
+NarcoNameArrow2.Name = "NarcoNameArrow2"
+NarcoNameArrow2.Parent = NarcoMain
+NarcoNameArrow2.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow2.BackgroundTransparency = 1
+NarcoNameArrow2.Position = UDim2.new(0.458000004, 0, 0.0659999996, 0)
+NarcoNameArrow2.Rotation = 90
+NarcoNameArrow2.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow2.Image = "rbxassetid://5200714577"
+NarcoNameArrow2.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow2.ImageTransparency = 1
+
+NarcoNameArrow3.Name = "NarcoNameArrow3"
+NarcoNameArrow3.Parent = NarcoMain
+NarcoNameArrow3.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow3.BackgroundTransparency = 1
+NarcoNameArrow3.Position = UDim2.new(0.497999996, 0, 0.0659999996, 0)
+NarcoNameArrow3.Rotation = 90
+NarcoNameArrow3.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow3.Image = "rbxassetid://5200714577"
+NarcoNameArrow3.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow3.ImageTransparency = 1
+
+NarcoNameArrow4.Name = "NarcoNameArrow4"
+NarcoNameArrow4.Parent = NarcoMain
+NarcoNameArrow4.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow4.BackgroundTransparency = 1
+NarcoNameArrow4.Position = UDim2.new(0.537999988, 0, 0.0659999996, 0)
+NarcoNameArrow4.Rotation = 90
+NarcoNameArrow4.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow4.Image = "rbxassetid://5200714577"
+NarcoNameArrow4.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow4.ImageTransparency = 1
+
+NarcoNameArrow5.Name = "NarcoNameArrow5"
+NarcoNameArrow5.Parent = NarcoMain
+NarcoNameArrow5.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow5.BackgroundTransparency = 1
+NarcoNameArrow5.Position = UDim2.new(0.578000009, 0, 0.0659999996, 0)
+NarcoNameArrow5.Rotation = 90
+NarcoNameArrow5.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow5.Image = "rbxassetid://5200714577"
+NarcoNameArrow5.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow5.ImageTransparency = 1
+
+NarcoNameArrow6.Name = "NarcoNameArrow6"
+NarcoNameArrow6.Parent = NarcoMain
+NarcoNameArrow6.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow6.BackgroundTransparency = 1
+NarcoNameArrow6.Position = UDim2.new(0.617999971, 0, 0.0659999996, 0)
+NarcoNameArrow6.Rotation = 90
+NarcoNameArrow6.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow6.Image = "rbxassetid://5200714577"
+NarcoNameArrow6.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow6.ImageTransparency = 1
+
+NarcoNameArrow7.Name = "NarcoNameArrow7"
+NarcoNameArrow7.Parent = NarcoMain
+NarcoNameArrow7.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow7.BackgroundTransparency = 1
+NarcoNameArrow7.Position = UDim2.new(0.657999992, 0, 0.0659999996, 0)
+NarcoNameArrow7.Rotation = 90
+NarcoNameArrow7.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow7.Image = "rbxassetid://5200714577"
+NarcoNameArrow7.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow7.ImageTransparency = 1
+
+NarcoNameArrow12.Name = "NarcoNameArrow12"
+NarcoNameArrow12.Parent = NarcoMain
+NarcoNameArrow12.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow12.BackgroundTransparency = 1
+NarcoNameArrow12.Position = UDim2.new(0.85799998, 0, 0.0659999996, 0)
+NarcoNameArrow12.Rotation = 90
+NarcoNameArrow12.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow12.Image = "rbxassetid://5200714577"
+NarcoNameArrow12.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow12.ImageTransparency = 1
+
+NarcoNameArrow8.Name = "NarcoNameArrow8"
+NarcoNameArrow8.Parent = NarcoMain
+NarcoNameArrow8.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow8.BackgroundTransparency = 1
+NarcoNameArrow8.Position = UDim2.new(0.698000014, 0, 0.0659999996, 0)
+NarcoNameArrow8.Rotation = 90
+NarcoNameArrow8.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow8.Image = "rbxassetid://5200714577"
+NarcoNameArrow8.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow8.ImageTransparency = 1
+
+NarcoNameArrow11.Name = "NarcoNameArrow11"
+NarcoNameArrow11.Parent = NarcoMain
+NarcoNameArrow11.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow11.BackgroundTransparency = 1
+NarcoNameArrow11.Position = UDim2.new(0.818000019, 0, 0.0659999996, 0)
+NarcoNameArrow11.Rotation = 90
+NarcoNameArrow11.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow11.Image = "rbxassetid://5200714577"
+NarcoNameArrow11.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow11.ImageTransparency = 1
+
+NarcoNameArrow9.Name = "NarcoNameArrow9"
+NarcoNameArrow9.Parent = NarcoMain
+NarcoNameArrow9.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow9.BackgroundTransparency = 1
+NarcoNameArrow9.Position = UDim2.new(0.737999976, 0, 0.0659999996, 0)
+NarcoNameArrow9.Rotation = 90
+NarcoNameArrow9.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow9.Image = "rbxassetid://5200714577"
+NarcoNameArrow9.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow9.ImageTransparency = 1
+
+NarcoNameArrow10.Name = "NarcoNameArrow10"
+NarcoNameArrow10.Parent = NarcoMain
+NarcoNameArrow10.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow10.BackgroundTransparency = 1
+NarcoNameArrow10.Position = UDim2.new(0.777999997, 0, 0.0659999996, 0)
+NarcoNameArrow10.Rotation = 90
+NarcoNameArrow10.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow10.Image = "rbxassetid://5200714577"
+NarcoNameArrow10.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow10.ImageTransparency = 1
+
+NarcoNameArrow13.Name = "NarcoNameArrow13"
+NarcoNameArrow13.Parent = NarcoMain
+NarcoNameArrow13.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow13.BackgroundTransparency = 1
+NarcoNameArrow13.Position = UDim2.new(0.89200002, 0, 0.0659999996, 0)
+NarcoNameArrow13.Rotation = 90
+NarcoNameArrow13.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow13.Image = "rbxassetid://5200714577"
+NarcoNameArrow13.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow13.ImageTransparency = 1
+
+NarcoNameArrow14.Name = "NarcoNameArrow14"
+NarcoNameArrow14.Parent = NarcoMain
+NarcoNameArrow14.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoNameArrow14.BackgroundTransparency = 1
+NarcoNameArrow14.Position = UDim2.new(0.931999981, 0, 0.0659999996, 0)
+NarcoNameArrow14.Rotation = 90
+NarcoNameArrow14.Size = UDim2.new(0, 20, 0, 20)
+NarcoNameArrow14.Image = "rbxassetid://5200714577"
+NarcoNameArrow14.ImageColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoNameArrow14.ImageTransparency = 1
+
+NarcoChangelogs.Name = "NarcoChangelogs"
+NarcoChangelogs.Parent = NarcoMain
+NarcoChangelogs.AnchorPoint = Vector2.new(0.5, 0.5)
+NarcoChangelogs.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoChangelogs.BackgroundTransparency = 1
+NarcoChangelogs.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+NarcoChangelogs.ClipsDescendants = true
+NarcoChangelogs.Position = UDim2.new(-0.215999946, 0, 0.499449044, 0)
+NarcoChangelogs.Size = UDim2.new(0, 202, 0, 299)
+NarcoChangelogs.Image = "rbxassetid://3570695787"
+NarcoChangelogs.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+NarcoChangelogs.ScaleType = Enum.ScaleType.Slice
+NarcoChangelogs.SliceCenter = Rect.new(100, 100, 100, 100)
+
+NarcoName_2.Name = "NarcoName"
+NarcoName_2.Parent = NarcoChangelogs
+NarcoName_2.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoName_2.BackgroundTransparency = 1
+NarcoName_2.BorderSizePixel = 0
+NarcoName_2.Position = UDim2.new(0.00617377739, 0, -0.00241685193, 0)
+NarcoName_2.Size = UDim2.new(0, 200, 0, 50)
+NarcoName_2.Font = Enum.Font.GothamBold
+NarcoName_2.Text = "CHANGELOGS"
+NarcoName_2.TextColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoName_2.TextSize = 25
+
+NarcoLogsWave.Name = "NarcoLogsWave"
+NarcoLogsWave.Parent = NarcoChangelogs
+NarcoLogsWave.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoLogsWave.BackgroundTransparency = 1
+NarcoLogsWave.ClipsDescendants = true
+NarcoLogsWave.Position = UDim2.new(-0.0148514807, 0, 0.264214039, 0)
+NarcoLogsWave.Size = UDim2.new(0, 208, 0, 232)
+NarcoLogsWave.Image = "rbxassetid://8520080181"
+NarcoLogsWave.ImageTransparency = 0.89999997615814
+
+NarcoChangelogsIn.Name = "NarcoChangelogsIn"
+NarcoChangelogsIn.Parent = NarcoChangelogs
+NarcoChangelogsIn.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoChangelogsIn.BackgroundTransparency = 1
+NarcoChangelogsIn.Position = UDim2.new(0.0450000018, 0, 0.151999995, 0)
+NarcoChangelogsIn.Size = UDim2.new(0, 184, 0, 245)
+NarcoChangelogsIn.Image = "rbxassetid://3570695787"
+NarcoChangelogsIn.ImageColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+NarcoChangelogsIn.ScaleType = Enum.ScaleType.Slice
+NarcoChangelogsIn.SliceCenter = Rect.new(100, 100, 100, 100)
+
+Version.Name = "Version"
+Version.Parent = NarcoChangelogsIn
+Version.BackgroundColor3 = Color3.new(1, 1, 1)
+Version.BackgroundTransparency = 1
+Version.Position = UDim2.new(0.386000007, 0, 0.0250000004, 0)
+Version.Size = UDim2.new(0, 40, 0, 16)
+Version.Font = Enum.Font.Code
+Version.Text = "v1.0.0.1"
+Version.TextColor3 = Color3.new(0.588235, 0.196078, 1)
+Version.TextSize = 14
+
+LogArg1.Name = "LogArg1"
+LogArg1.Parent = NarcoChangelogsIn
+LogArg1.BackgroundColor3 = Color3.new(1, 1, 1)
+LogArg1.BackgroundTransparency = 1
+LogArg1.Position = UDim2.new(0.0381739251, 0, 0.139285713, 0)
+LogArg1.Size = UDim2.new(0, 176, 0, 16)
+LogArg1.Font = Enum.Font.Code
+LogArg1.Text = "[+] Basic Animations"
+LogArg1.TextColor3 = Color3.new(0, 1, 0.74902)
+LogArg1.TextSize = 14
+LogArg1.TextXAlignment = Enum.TextXAlignment.Left
+
+LogArg2.Name = "LogArg2"
+LogArg2.Parent = NarcoChangelogsIn
+LogArg2.BackgroundColor3 = Color3.new(1, 1, 1)
+LogArg2.BackgroundTransparency = 1
+LogArg2.Position = UDim2.new(0.0381739251, 0, 0.229081631, 0)
+LogArg2.Size = UDim2.new(0, 176, 0, 16)
+LogArg2.Font = Enum.Font.Code
+LogArg2.Text = "[+] AutoFarms"
+LogArg2.TextColor3 = Color3.new(0, 1, 0.74902)
+LogArg2.TextSize = 14
+LogArg2.TextXAlignment = Enum.TextXAlignment.Left
+
+LogArg3.Name = "LogArg3"
+LogArg3.Parent = NarcoChangelogsIn
+LogArg3.BackgroundColor3 = Color3.new(1, 1, 1)
+LogArg3.BackgroundTransparency = 1
+LogArg3.Position = UDim2.new(0.0381739251, 0, 0.331122458, 0)
+LogArg3.Size = UDim2.new(0, 176, 0, 16)
+LogArg3.Font = Enum.Font.Code
+LogArg3.Text = "[+] Changelogs"
+LogArg3.TextColor3 = Color3.new(0, 1, 0.74902)
+LogArg3.TextSize = 14
+LogArg3.TextXAlignment = Enum.TextXAlignment.Left
+
+LogArgnega1.Name = "LogArgnega1"
+LogArgnega1.Parent = NarcoChangelogsIn
+LogArgnega1.BackgroundColor3 = Color3.new(1, 1, 1)
+LogArgnega1.BackgroundTransparency = 1
+LogArgnega1.Position = UDim2.new(0.0381739251, 0, 0.441326529, 0)
+LogArgnega1.Size = UDim2.new(0, 176, 0, 16)
+LogArgnega1.Font = Enum.Font.Code
+LogArgnega1.Text = "[-] Some bugs"
+LogArgnega1.TextColor3 = Color3.new(1, 0, 0.529412)
+LogArgnega1.TextSize = 14
+LogArgnega1.TextXAlignment = Enum.TextXAlignment.Left
+
+LogArgsoon1.Name = "LogArgsoon1"
+LogArgsoon1.Parent = NarcoChangelogsIn
+LogArgsoon1.BackgroundColor3 = Color3.new(1, 1, 1)
+LogArgsoon1.BackgroundTransparency = 1
+LogArgsoon1.Position = UDim2.new(0.0381739251, 0, 0.555612266, 0)
+LogArgsoon1.Size = UDim2.new(0, 176, 0, 16)
+LogArgsoon1.Font = Enum.Font.Code
+LogArgsoon1.Text = "[···] Better animations"
+LogArgsoon1.TextColor3 = Color3.new(0.588235, 0.196078, 1)
+LogArgsoon1.TextSize = 14
+LogArgsoon1.TextXAlignment = Enum.TextXAlignment.Left
+
+LogArgsoon2.Name = "LogArgsoon2"
+LogArgsoon2.Parent = NarcoChangelogsIn
+LogArgsoon2.BackgroundColor3 = Color3.new(1, 1, 1)
+LogArgsoon2.BackgroundTransparency = 1
+LogArgsoon2.Position = UDim2.new(0.0381739251, 0, 0.665816367, 0)
+LogArgsoon2.Size = UDim2.new(0, 176, 0, 16)
+LogArgsoon2.Font = Enum.Font.Code
+LogArgsoon2.Text = "[···] Better scripts"
+LogArgsoon2.TextColor3 = Color3.new(0.588235, 0.196078, 1)
+LogArgsoon2.TextSize = 14
+LogArgsoon2.TextXAlignment = Enum.TextXAlignment.Left
+
+LogsClose.Name = "LogsClose"
+LogsClose.Parent = NarcoMain
+LogsClose.AnchorPoint = Vector2.new(0.5, 0.5)
+LogsClose.BackgroundColor3 = Color3.new(1, 1, 1)
+LogsClose.BackgroundTransparency = 1
+LogsClose.Position = UDim2.new(-0.217434779, 0, 1.07639468, 0)
+LogsClose.Size = UDim2.new(0, 25, 0, 25)
+LogsClose.Image = "rbxassetid://3570695787"
+LogsClose.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+
+LogsCloseBtn.Name = "LogsCloseBtn"
+LogsCloseBtn.Parent = LogsClose
+LogsCloseBtn.AnchorPoint = Vector2.new(0.5, 0.5)
+LogsCloseBtn.BackgroundColor3 = Color3.new(1, 1, 1)
+LogsCloseBtn.BackgroundTransparency = 1
+LogsCloseBtn.Position = UDim2.new(0.50999999, 0, 0.519999981, 0)
+LogsCloseBtn.Size = UDim2.new(0, 25, 0, 25)
+LogsCloseBtn.Font = Enum.Font.Cartoon
+LogsCloseBtn.Text = "X"
+LogsCloseBtn.TextColor3 = Color3.new(0.588235, 0.196078, 1)
+LogsCloseBtn.TextSize = 14
+LogsCloseBtn.TextWrapped = true
+
+NarcoLogin.Name = "NarcoLogin"
+NarcoLogin.Parent = NarcoGUI
+NarcoLogin.AnchorPoint = Vector2.new(0.5, 0.5)
+NarcoLogin.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoLogin.BackgroundTransparency = 1
+NarcoLogin.Position = UDim2.new(0.5, 0, 0.499165297, 0)
+NarcoLogin.Image = "rbxassetid://3570695787"
+NarcoLogin.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+NarcoLogin.ScaleType = Enum.ScaleType.Slice
+NarcoLogin.SliceCenter = Rect.new(100, 100, 100, 100)
+
+LoginName.Name = "LoginName"
+LoginName.Parent = NarcoLogin
+LoginName.BackgroundColor3 = Color3.new(1, 1, 1)
+LoginName.BackgroundTransparency = 1
+LoginName.BorderSizePixel = 0
+LoginName.Position = UDim2.new(0.104832858, 0, -0.00569444522, 0)
+LoginName.Size = UDim2.new(0, 200, 0, 50)
+LoginName.Font = Enum.Font.GothamBold
+LoginName.Text = "NARCOSIA"
+LoginName.TextColor3 = Color3.new(0.588235, 0.196078, 1)
+LoginName.TextSize = 30
+LoginName.TextTransparency = 1
+
+LoginBox.Name = "LoginBox"
+LoginBox.Parent = NarcoLogin
+LoginBox.Active = false
+LoginBox.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
+LoginBox.BackgroundTransparency = 1
+LoginBox.BorderSizePixel = 0
+LoginBox.Position = UDim2.new(0.075000003, 0, 0.529999971, 0)
+LoginBox.Size = UDim2.new(0, 218, 0, 30)
+LoginBox.Font = Enum.Font.GothamSemibold
+LoginBox.PlaceholderColor3 = Color3.new(0.309804, 0.101961, 0.54902)
+LoginBox.PlaceholderText = "Licence Key here"
+LoginBox.Text = ""
+LoginBox.TextColor3 = Color3.new(0, 0, 0)
+LoginBox.TextSize = 14
+LoginBox.TextTransparency = 1
+
+LoginBtn.Name = "LoginBtn"
+LoginBtn.Parent = NarcoLogin
+LoginBtn.AnchorPoint = Vector2.new(0.5, 0.5)
+LoginBtn.BackgroundColor3 = Color3.new(1, 1, 1)
+LoginBtn.BackgroundTransparency = 1
+LoginBtn.Position = UDim2.new(0.497999996, 0, 3.75, 0)
+LoginBtn.Size = UDim2.new(0, 128, 0, 36)
+LoginBtn.Visible = false
+LoginBtn.Image = "rbxassetid://3570695787"
+LoginBtn.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+LoginBtn.ScaleType = Enum.ScaleType.Slice
+LoginBtn.SliceCenter = Rect.new(100, 100, 100, 100)
+
+LoginSend.Name = "LoginSend"
+LoginSend.Parent = LoginBtn
+LoginSend.AnchorPoint = Vector2.new(0.5, 0.5)
+LoginSend.BackgroundColor3 = Color3.new(1, 1, 1)
+LoginSend.BackgroundTransparency = 1
+LoginSend.Position = UDim2.new(0.5, 0, 0.5, 0)
+LoginSend.Size = UDim2.new(0, 128, 0, 36)
+LoginSend.Font = Enum.Font.GothamBold
+LoginSend.Text = "LOGIN"
+LoginSend.TextColor3 = Color3.new(0.588235, 0.196078, 1)
+LoginSend.TextSize = 19
+
+local rs = game:GetService("RunService")
+
+local ncr = script.Parent.Parent.NarcoCredits
+local gradientncr = ncr.NarcocrGradient
+
+local speed = 1
+rs.RenderStepped:Connect(function(dt)
+	gradientncr.Offset = Vector2.new(gradientncr.Offset.X + (speed*dt), 0)
+	if gradientncr.Offset.X >= 1 then
+		local isRotated = (gradientncr.Rotation == 180)
+		gradientncr.Rotation = isRotated and 0 or 180; gradientncr.Offset = Vector2.new(-1, 0) --isRotated and -0.5 or -1
+	end
+end)
+
+
+
+local nn = script.Parent.Parent.NarcoName
+local gradientnn = nn.NarcoNameGradient
+
+local speed = 1
+rs.RenderStepped:Connect(function(dt)
+	gradientnn.Offset = Vector2.new(gradientnn.Offset.X + (speed*dt), 0)
+	if gradientnn.Offset.X >= 1 then
+		local isRotated = (gradientnn.Rotation == 180)
+		gradientnn.Rotation = isRotated and 0 or 180; gradientnn.Offset = Vector2.new(-1, 0) --isRotated and -0.5 or -1
+	end
+end)
+
+local TweenService = game:GetService("TweenService")
+
+
+
+
+-- HOME BUTTON
+
+script.Parent.NarcoMain.NarcoInScd1.HomeBtn.MouseEnter:Connect(function()
+	
+	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.HomeBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+	script.Parent.NarcoMain.NarcoInScd1.HomeBtn:TweenSize(UDim2.new(0, 16, 0, 16), "In", "Quad", 0.1, true)
+	
+end)
+
+script.Parent.NarcoMain.NarcoInScd1.HomeBtn.MouseLeave:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.HomeBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	script.Parent.NarcoMain.NarcoInScd1.HomeBtn:TweenSize(UDim2.new(0, 15, 0, 15), "In", "Quad", 0.1, true)
+
+end)
+
+script.Parent.NarcoMain.NarcoInScd1.HomeBtn.MouseButton1Click:Connect(function()
+
+	script.Parent.NarcoMain.NarcoHomeIn.Visible = true
+	script.Parent.NarcoMain.NarcoSettingsIn.Visible = false
+	script.Parent.NarcoMain.NarcoTPIn.Visible = false
+	script.Parent.NarcoMain.NarcoPlayerIn.Visible = false
+
+end)
+
+script.Parent.NarcoMain.NarcoInScd1.HomeBtn.MouseButton1Down:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.HomeBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
+
+end)
+
+-- SETTINGS BUTTON
+
+script.Parent.NarcoMain.NarcoInScd1.SettingsBtn.MouseEnter:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.SettingsBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+	script.Parent.NarcoMain.NarcoInScd1.SettingsBtn:TweenSize(UDim2.new(0, 16, 0, 16), "In", "Quad", 0.1, true)
+
+end)
+
+script.Parent.NarcoMain.NarcoInScd1.SettingsBtn.MouseLeave:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.SettingsBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	script.Parent.NarcoMain.NarcoInScd1.SettingsBtn:TweenSize(UDim2.new(0, 15, 0, 15), "In", "Quad", 0.1, true)
+
+end)
+
+script.Parent.NarcoMain.NarcoInScd1.SettingsBtn.MouseButton1Click:Connect(function()
+
+	script.Parent.NarcoMain.NarcoHomeIn.Visible = false
+	script.Parent.NarcoMain.NarcoSettingsIn.Visible = true
+	script.Parent.NarcoMain.NarcoTPIn.Visible = false
+	script.Parent.NarcoMain.NarcoPlayerIn.Visible = false
+
+end)
+
+script.Parent.NarcoMain.NarcoInScd1.SettingsBtn.MouseButton1Down:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.SettingsBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
+
+end)
+
+-- TP BUTTON
+
+script.Parent.NarcoMain.NarcoInScd1.TPBtn.MouseEnter:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.TPBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+	script.Parent.NarcoMain.NarcoInScd1.TPBtn:TweenSize(UDim2.new(0, 16, 0, 16), "In", "Quad", 0.1, true)
+
+end)
+
+script.Parent.NarcoMain.NarcoInScd1.TPBtn.MouseLeave:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.TPBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	script.Parent.NarcoMain.NarcoInScd1.TPBtn:TweenSize(UDim2.new(0, 15, 0, 15), "In", "Quad", 0.1, true)
+
+end)
+
+script.Parent.NarcoMain.NarcoInScd1.TPBtn.MouseButton1Click:Connect(function()
+
+	script.Parent.NarcoMain.NarcoHomeIn.Visible = false
+	script.Parent.NarcoMain.NarcoSettingsIn.Visible = false
+	script.Parent.NarcoMain.NarcoTPIn.Visible = true
+	script.Parent.NarcoMain.NarcoPlayerIn.Visible = false
+
+end)
+
+script.Parent.NarcoMain.NarcoInScd1.TPBtn.MouseButton1Down:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.TPBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
+
+end)
+
+-- PLAYER BUTTON
+
+script.Parent.NarcoMain.NarcoInScd1.PlayerBtn.MouseEnter:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.PlayerBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+	script.Parent.NarcoMain.NarcoInScd1.PlayerBtn:TweenSize(UDim2.new(0, 15, 0, 16), "In", "Quad", 0.1, true)
+
+
+end)
+
+script.Parent.NarcoMain.NarcoInScd1.PlayerBtn.MouseLeave:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.PlayerBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	script.Parent.NarcoMain.NarcoInScd1.PlayerBtn:TweenSize(UDim2.new(0, 14, 0, 15), "In", "Quad", 0.1, true)
+
+end)
+
+script.Parent.NarcoMain.NarcoInScd1.PlayerBtn.MouseButton1Click:Connect(function()
+
+	script.Parent.NarcoMain.NarcoHomeIn.Visible = false
+	script.Parent.NarcoMain.NarcoSettingsIn.Visible = false
+	script.Parent.NarcoMain.NarcoTPIn.Visible = false
+	script.Parent.NarcoMain.NarcoPlayerIn.Visible = true
+
+end)
+
+script.Parent.NarcoMain.NarcoInScd1.PlayerBtn.MouseButton1Down:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoInScd1.PlayerBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
+	
+end)
+
+-- LOGS CLOSE BUTTON
+
+script.Parent.NarcoMain.LogsClose.LogsCloseBtn.MouseEnter:Connect(function()
+
+	script.Parent.NarcoMain.LogsClose:TweenSize(UDim2.new(0, 30, 0, 30), "In", "Quad", 0.1, true)
+	TweenService:Create(script.Parent.NarcoMain.LogsClose.LogsCloseBtn, TweenInfo.new(0.1), {TextSize = 20}):Play()
+
+
+end)
+
+script.Parent.NarcoMain.LogsClose.LogsCloseBtn.MouseLeave:Connect(function()
+
+	script.Parent.NarcoMain.LogsClose:TweenSize(UDim2.new(0, 25, 0, 25), "In", "Quad", 0.1, true)
+	TweenService:Create(script.Parent.NarcoMain.LogsClose.LogsCloseBtn, TweenInfo.new(0.1), {TextSize = 12}):Play()
+
+end)
+
+script.Parent.NarcoMain.LogsClose.LogsCloseBtn.MouseButton1Click:Connect(function()
+
+	script.Parent.NarcoMain.NarcoChangelogs:TweenPosition(UDim2.new(-0.216, 0, 2.1, 0), "In", "Quad", 0.1, true)
+	wait(0.1)
+	script.Parent.NarcoMain.LogsClose.Visible = false
+	script.Parent.NarcoMain.NarcoChangelogs.Visible = false
+
+end)
+
+
+
+
+
+-- RANDOM PASSWORD
+
+
+local HowManyCharacters = math.random(15, 20)
+
+local Alphabet = true
+local Numbers = false
+local SpecialCharacters = true
+local Space = false
+
+
+
+
+local alphabet = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz'
+local numbers = '1234567890'
+local specialcharacters = '{}!@#$%^&*()_+-=[]\\/.,*+'
+local space = ' '
+local output = ''
+
+
+
+function ReturnUsable()
+	local returntable = {}
+	if Alphabet==true then
+		table.insert(returntable,1,alphabet)
+	end
+	if Numbers==true then
+		table.insert(returntable,1,numbers)
+	end
+	if SpecialCharacters==true then
+		table.insert(returntable,1,specialcharacters)
+	end
+	if Space==true then
+		table.insert(returntable,1,space)
+	end
+	return returntable
+end
+
+for i=1,HowManyCharacters do
+	local tables = ReturnUsable()
+	local CurrentType = tables[math.random(1,#tables)]
+	local a = math.random(1,string.len(CurrentType))
+	output = output .. string.sub(CurrentType,a,a)
+end
+
+-- NOTFICATION
+
+local function callback(Text)
+	if Text == "Button1 text" then
+		print ("Answer")
+	elseif Text == ("Button2 text") then
+		print ("Answer2")
+	end
+end
+
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+
+game.StarterGui:SetCore("SendNotification",  {
+	Title = "Inject ID";
+	Text = output;
+	Icon = "rbxassetid://8507290692";
+	Duration = 10;
+	Button1 = "OK";
+	Callback = NotificationBindable;
+})
+
+-- ARROW ANIMATION --
+
+while true do 
+	
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow1, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow14, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow14, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow13, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow13, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow12, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow12, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow11, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow11, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow10, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow10, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow9, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow9, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow8, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow8, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow7, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow7, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow6, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow6, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow5, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow5, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow4, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow4, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow3, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow3, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow2, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow2, TweenInfo.new(0.3), {ImageTransparency = 1}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoNameArrow1, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
+	wait(0.075)
+end
+
+
+getgenv().dump = false -- true/false | on/off
+
+--AUTOFARM
+
+script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm.HomeAF.MouseEnter:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm.HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+
+end)
+
+script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm.HomeAF.MouseLeave:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(30, 30, 30)}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm.HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+
+end)
+
+script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm.HomeAF.MouseButton1Click:Connect(function()
+	
+	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeAutoFarm.HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+while true do
+	if getgenv().dump == true then
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Actived",
+			Text = "Click again to stop it.",
+			Duration = 3
+		})
+	while getgenv().dump == true do
+		for i, v in pairs(game:GetService("Workspace").recuperation:GetChildren()) do
+			wait()
+			
+				if
+					game:GetService("Players").LocalPlayer.lstats.backpack.Value >= game:GetService("Players").LocalPlayer.lstats.backpackstorage.Value
+				then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").interactivity.sell.teleport.CFrame
+				else
+					if v:IsA("MeshPart") then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame + Vector3.new(5, 5, 5)
+						for i = 1, 20 do
+							wait()
+							keypress(0x45)
+						end
+						wait(.5)
+						keyrelease(0x45)
+					end
+				end
+			end
+		end
+
+		else if getgenv().dump == false then
+			
+		return
+					TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+			end
+		end
+		end
+	
+end)
+
+
+--RAINFARM
+
+script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF.MouseEnter:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+
+end)
+
+script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF.MouseLeave:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(30, 30, 30)}):Play()
+	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+
+end)
+
+
+script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF.MouseButton1Click:Connect(function()
+
+	TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+	while true do
+		
+		getgenv().rain = false -- true/false | on/off
+
+		if getgenv().rain == true then
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "Dump Simulator Autofarm",
+				Text = "Autofarm Has Been Turned To True",
+				Duration = 3
+			})
+		while getgenv().rain == true do
+			for i, v in pairs(game:GetService("Workspace")["rain_drop"]:GetChildren()) do
+				wait()
+			
+					if v:IsA("MeshPart") then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame + Vector3.new(5, 5, 5)
+						for i = 1, 20 do
+							wait()
+							keypress(0x45)
+						end
+						wait(.5)
+						keyrelease(0x45)
+					end
+				end
+			end
+
+
+		
+		else if getgenv().rain == false then
+
+		return
+			TweenService:Create(script.Parent.NarcoMain.NarcoHomeIn.HomeRainAutoFarm.HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+
+	end
+	
+	end
+
+
+end
+end)
+
+
+local UserInputService = game:GetService("UserInputService")
+
+local gui = script.Parent.NarcoMain
+
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+	local delta = input.Position - dragStart
+	gui.Position = gui:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y), 'Out', 'Linear', 0.15, true); -- drag speed
+end
+
+gui.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		dragging = true
+		dragStart = input.Position
+		startPos = gui.Position
+
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+
+gui.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		dragInput = input
+	end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		update(input)
+	end
+end)
+
+local narcomainkey = script.Parent.NarcoMain
+local on = false
+
+local posoff = UDim2.new(0, script.Parent.NarcoMain.AbsolutePosition.X, 1.5, script.Parent.NarcoMain.AbsolutePosition.Y)
+local poson =  UDim2.new(0, script.Parent.NarcoMain.AbsolutePosition.X, 0, script.Parent.NarcoMain.AbsolutePosition.Y)
+
+local UIS =game:GetService("UserInputService")
+
+UIS.InputBegan:Connect(function(KeyCode)
+	
+	if KeyCode.KeyCode == Enum.KeyCode.Insert then
+		if on then
+			narcomainkey:TweenPosition((poson), "Out", "Quad", 0.15, true)
+			on = false
+		else
+			narcomainkey:TweenPosition((posoff), "Out", "Quad", 0.15, true)
+			on = true
+		end
+	end
+	
+end)
+
+
+
+
+local ln = script.Parent.Parent.Parent.NarcoLogin
+local gradientln = ln.LoginName.LoginNameGradient
+
+local speed = 1
+rs.RenderStepped:Connect(function(dt)
+	gradientln.Offset = Vector2.new(gradientln.Offset.X + (speed*dt), 0)
+	if gradientln.Offset.X >= 1 then
+		local isRotated = (gradientln.Rotation == 180)
+		gradientln.Rotation = isRotated and 0 or 180; gradientln.Offset = Vector2.new(-1, 0) --isRotated and -0.5 or -1
+	end
+end)
+
+
+local Player = game:GetService("Players").LocalPlayer
+
+wait(0.5)
+script.Parent.Parent.NarcoLogin:TweenSize(UDim2.new(0, 254, 0, 100), "In", "Quad", 0.5, true)
+wait(1)
+TweenService:Create(script.Parent.LoginName, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
+TweenService:Create(script.Parent.LoginBox, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
+TweenService:Create(script.Parent.LoginBox, TweenInfo.new(0.3), {BackgroundTransparency = 0}):Play()
+script.Parent.LoginBox.Active = true
+
+wait(0.5)
+script.Parent.LoginBtn:TweenPosition(UDim2.new(0.498, 0, 1.276, 0), "In", "Quad", 0.5, true)
+script.Parent.LoginBtn.Visible = true
+
+
+
+
+
+
+script.Parent.LoginBtn.LoginSend.MouseEnter:Connect(function()
+
+	TweenService:Create(script.Parent.LoginBtn.LoginSend, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+	script.Parent.LoginBtn:TweenSize(UDim2.new(0, 150, 0, 36), "In", "Quad", 0.1, true)
+
+end)
+
+script.Parent.LoginBtn.LoginSend.MouseLeave:Connect(function()
+
+	TweenService:Create(script.Parent.LoginBtn.LoginSend, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	script.Parent.LoginBtn:TweenSize(UDim2.new(0, 128, 0, 36), "In", "Quad", 0.1, true)
+
+end)
+
+script.Parent.LoginBtn.LoginSend.MouseButton1Click:Connect(function()
+	if script.Parent.LoginBox.Text == "qHYDaLFNVtwKsjVcLpPaTEmNpbduFftZCdFtDJZS" or "yRNpXHJzPvyzSWxMqkdhbrsfCGjpQPSLeeEEkAMb" then
+		script.Parent.Parent.NarcoLogin.Visible = false
+		script.Parent.Parent.NarcoMain.Visible = true
+	else
+				Player:Kick("Wrong License Key, bye !")
+	end
+	
+
+end)
