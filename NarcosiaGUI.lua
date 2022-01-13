@@ -1434,8 +1434,8 @@ TPADOFF.MouseButton1Click:Connect(function()
 
 	getgenv().autodrill = false -- true/false | on/off
 
+	
 	local time = 300
-
 
 	if getgenv().autodrill == true then
 		game.StarterGui:SetCore("SendNotification", {
@@ -1512,6 +1512,8 @@ TPAD.MouseButton1Click:Connect(function()
 	wait(0.3)
 	TPADOFF.TextColor3 = Color3.fromRGB(150, 50, 255)
 	TPAD.TextColor3 = Color3.fromRGB(0, 255, 128)
+	
+	local time = 300
 
 	local autodrillargs = {
 		[1] = workspace.drilling_area.drills.drilling_machine_lvl4,
@@ -1521,6 +1523,9 @@ TPAD.MouseButton1Click:Connect(function()
 	}
 
 	getgenv().autodrill = true -- true/false | on/off
+
+
+
 
 	if getgenv().autodrill == true then
 		game.StarterGui:SetCore("SendNotification", {
@@ -1542,15 +1547,28 @@ TPAD.MouseButton1Click:Connect(function()
 
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1421, -14, -1652), Vector3.new(-0, -0, -1))
 			game:GetService("ReplicatedStorage").RemoteEvent.put_Drill:FireServer(unpack(autodrillargs))
-			wait(301)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1421, -14, -1652), Vector3.new(-0, -0, -1))
-			wait(2.5)
-			for i = 1, 60 do
-				wait()
-				keypress(0x45)
+			while wait(1) do
+				if time == 0 then
+					CountdownAD.Text = "0"
+
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1421, -14, -1652), Vector3.new(-0, -0, -1))
+					wait(2.5)
+					for i = 1, 60 do
+						wait()
+						keypress(0x45)
+					end
+					wait(.5)
+					keyrelease(0x45)
+
+					CountdownAD.Visible = false
+					break
+				else
+					CountdownAD.Visible = true
+					CountdownAD.Text = tostring(time) --sets onscreen gui timer
+					time = time - 1
+				end
 			end
-			wait(.5)
-			keyrelease(0x45)
+
 
 		end
 	end
