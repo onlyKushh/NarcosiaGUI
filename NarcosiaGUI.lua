@@ -871,9 +871,9 @@ local TweenService = game:GetService("TweenService")
 wait(0.5)
 NarcoLogin.SliceScale = 50
 NarcoLogin.Size = UDim2.new(0, 0, 0, 0)
-NarcoLogin:TweenSize(UDim2.new(0, 100, 0, 100), "Out", "Quad", 1, true)
+NarcoLogin:TweenSize(UDim2.new(0, 100, 0, 100), "Out", "Quart", 1, true)
 wait(3)
-NarcoLogin:TweenSize(UDim2.new(0, 254, 0, 100), "Out", "Quad", 1.1, true)
+NarcoLogin:TweenSize(UDim2.new(0, 254, 0, 100), "In", "Quad", 1.1, true)
 TweenService:Create(NarcoLogin, TweenInfo.new(1), {SliceScale = 0.05}):Play()
 wait(1)
 TweenService:Create(LoginName, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
@@ -1437,7 +1437,7 @@ TPADOFF.MouseButton1Click:Connect(function()
 
 	getgenv().autodrill = false -- true/false | on/off
 
-	
+
 	local time = 300
 
 	if getgenv().autodrill == true then
@@ -1515,7 +1515,7 @@ TPAD.MouseButton1Click:Connect(function()
 	wait(0.3)
 	TPADOFF.TextColor3 = Color3.fromRGB(150, 50, 255)
 	TPAD.TextColor3 = Color3.fromRGB(0, 255, 128)
-	
+
 	local time = 300
 
 	local autodrillargs = {
