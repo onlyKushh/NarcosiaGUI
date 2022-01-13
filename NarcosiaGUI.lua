@@ -773,7 +773,9 @@ LogsClose.Position = UDim2.new(-0.217434779, 0, 1.07639468, 0)
 LogsClose.Size = UDim2.new(0, 25, 0, 25)
 LogsClose.Image = "rbxassetid://3570695787"
 LogsClose.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-LogsClose.SliceScale = 0.050
+NarcoLogin.ScaleType = Enum.ScaleType.Slice
+NarcoLogin.SliceCenter = Rect.new(100, 100, 100, 100)
+NarcoLogin.SliceScale = 0.050
 
 LogsCloseBtn.Name = "LogsCloseBtn"
 LogsCloseBtn.Parent = LogsClose
