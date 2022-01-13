@@ -1136,7 +1136,7 @@ game.StarterGui:SetCore("SendNotification",  {
 
 getgenv().dump = false -- true/false | on/off
 
---AUTOFARM
+-- AUTOFARM
 
 HomeAF.MouseEnter:Connect(function()
 
@@ -1202,7 +1202,7 @@ HomeAF.MouseButton1Click:Connect(function()
 end)
 
 
---RAINFARM
+-- RAINFARM
 
 HomeRAF.MouseEnter:Connect(function()
 
@@ -1265,6 +1265,9 @@ HomeRAF.MouseButton1Click:Connect(function()
 end)
 
 
+-- RAIN AUTO FARM OFF
+
+
 HomeRAFOFF.MouseEnter:Connect(function()
 
 	TweenService:Create(HomeRainAutoFarmOFF, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
@@ -1325,10 +1328,14 @@ HomeRAFOFF.MouseButton1Click:Connect(function()
 
 end)
 
-HomeRAFOFF.MouseEnter:Connect(function()
 
-	TweenService:Create(HomeRainAutoFarmOFF, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
-	TweenService:Create(HomeRainAutoFarmOFF.HomeRAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+-- AUTO FARM OFF
+
+
+HomeAFOFF.MouseEnter:Connect(function()
+
+	TweenService:Create(HomeAutoFarmOFF, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+	TweenService:Create(HomeAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
 
 end)
 
@@ -1387,6 +1394,24 @@ HomeAFOFF.MouseButton1Click:Connect(function()
 			end
 		end
 	end
+
+end)
+
+
+-- TP AUTO DRILL OFF
+
+
+TPADOFF.MouseEnter:Connect(function()
+
+	TweenService:Create(TPAutoDrillOFF, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+	TweenService:Create(TPADOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+
+end)
+
+TPADOFF.MouseLeave:Connect(function()
+
+	TweenService:Create(TPAutoDrillOFF, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(30, 30, 30)}):Play()
+	TweenService:Create(TPADOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
 
 end)
 
@@ -1459,6 +1484,25 @@ TPADOFF.MouseButton1Click:Connect(function()
 
 end)
 
+
+-- TP AUTO DRILL ON
+
+TPAD.MouseEnter:Connect(function()
+
+	TweenService:Create(TPAutoDrill, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+	TweenService:Create(TPAD, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+
+end)
+
+TPAD.MouseLeave:Connect(function()
+
+	TweenService:Create(TPAutoDrill, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(30, 30, 30)}):Play()
+	TweenService:Create(TPAD, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+
+end)
+
+
+
 TPAD.MouseButton1Click:Connect(function()
 
 	TweenService:Create(TPAD, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
@@ -1512,6 +1556,26 @@ TPAD.MouseButton1Click:Connect(function()
 
 end)
 
+
+
+-- PLAYER NO CLIP
+
+PlayerNC.MouseEnter:Connect(function()
+
+	TweenService:Create(PlayerNoclip, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+	TweenService:Create(PlayerNC, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+
+end)
+
+PlayerNC.MouseLeave:Connect(function()
+
+	TweenService:Create(PlayerNoclip, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(30, 30, 30)}):Play()
+	TweenService:Create(PlayerNC, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+
+end)
+
+
+
 PlayerNC.MouseButton1Click:Connect(function()
 
 	TweenService:Create(PlayerNC, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
@@ -1536,6 +1600,23 @@ PlayerNC.MouseButton1Click:Connect(function()
 	print('Loaded')
 	print('Press "E" to noclip')
 
+
+end)
+
+
+-- PLAYER FLY
+
+PlayerF.MouseEnter:Connect(function()
+
+	TweenService:Create(PlayerFly, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+	TweenService:Create(PlayerF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(160, 100, 255)}):Play()
+
+end)
+
+PlayerF.MouseLeave:Connect(function()
+
+	TweenService:Create(PlayerFly, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(30, 30, 30)}):Play()
+	TweenService:Create(PlayerF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
 
 end)
 
