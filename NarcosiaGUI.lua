@@ -699,7 +699,7 @@ LogArg1.BackgroundTransparency = 1
 LogArg1.Position = UDim2.new(0.0381739251, 0, 0.139285713, 0)
 LogArg1.Size = UDim2.new(0, 176, 0, 16)
 LogArg1.Font = Enum.Font.Code
-LogArg1.Text = "[+] Basic Animations"
+LogArg1.Text = "[+] Better Animations"
 LogArg1.TextColor3 = Color3.new(0, 1, 0.74902)
 LogArg1.TextSize = 14
 LogArg1.TextXAlignment = Enum.TextXAlignment.Left
@@ -711,7 +711,7 @@ LogArg2.BackgroundTransparency = 1
 LogArg2.Position = UDim2.new(0.0381739251, 0, 0.229081631, 0)
 LogArg2.Size = UDim2.new(0, 176, 0, 16)
 LogArg2.Font = Enum.Font.Code
-LogArg2.Text = "[+] AutoFarms"
+LogArg2.Text = "[+] Auto Drill"
 LogArg2.TextColor3 = Color3.new(0, 1, 0.74902)
 LogArg2.TextSize = 14
 LogArg2.TextXAlignment = Enum.TextXAlignment.Left
@@ -723,7 +723,7 @@ LogArg3.BackgroundTransparency = 1
 LogArg3.Position = UDim2.new(0.0381739251, 0, 0.331122458, 0)
 LogArg3.Size = UDim2.new(0, 176, 0, 16)
 LogArg3.Font = Enum.Font.Code
-LogArg3.Text = "[+] Changelogs"
+LogArg3.Text = "[+] Walkspeed"
 LogArg3.TextColor3 = Color3.new(0, 1, 0.74902)
 LogArg3.TextSize = 14
 LogArg3.TextXAlignment = Enum.TextXAlignment.Left
@@ -735,7 +735,7 @@ LogArgnega1.BackgroundTransparency = 1
 LogArgnega1.Position = UDim2.new(0.0381739251, 0, 0.441326529, 0)
 LogArgnega1.Size = UDim2.new(0, 176, 0, 16)
 LogArgnega1.Font = Enum.Font.Code
-LogArgnega1.Text = "[-] Some bugs"
+LogArgnega1.Text = "[-] Fly/Noclip"
 LogArgnega1.TextColor3 = Color3.new(1, 0, 0.529412)
 LogArgnega1.TextSize = 14
 LogArgnega1.TextXAlignment = Enum.TextXAlignment.Left
@@ -870,7 +870,10 @@ local TweenService = game:GetService("TweenService")
 
 wait(0.5)
 NarcoLogin.SliceScale = 50
-NarcoLogin:TweenSize(UDim2.new(0, 254, 0, 100), "In", "Quad", 0.5, true)
+NarcoLogin.Size = UDim2.new(0, 0, 0, 0)
+NarcoLogin:TweenSize(UDim2.new(0, 100, 0, 100), "Out", "Quad", 1, true)
+wait(3)
+NarcoLogin:TweenSize(UDim2.new(0, 254, 0, 100), "Out", "Quad", 1.1, true)
 TweenService:Create(NarcoLogin, TweenInfo.new(1), {SliceScale = 0.05}):Play()
 wait(1)
 TweenService:Create(LoginName, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
