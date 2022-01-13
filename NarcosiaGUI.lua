@@ -74,7 +74,7 @@ NarcoGUI.Name = "NarcoGUI"
 NarcoGUI.Parent = game.CoreGui
 
 CountdownAD.Name = "CountdownAD"
-CountdownAD.Parent = NarcoMain
+CountdownAD.Parent = NarcoGUI
 CountdownAD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CountdownAD.BackgroundTransparency = 1.000
 CountdownAD.BorderColor3 = Color3.fromRGB(27, 42, 53)
@@ -773,6 +773,9 @@ LogsClose.Position = UDim2.new(-0.217434779, 0, 1.07639468, 0)
 LogsClose.Size = UDim2.new(0, 25, 0, 25)
 LogsClose.Image = "rbxassetid://3570695787"
 LogsClose.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+NarcoLogin.ScaleType = Enum.ScaleType.Slice
+NarcoLogin.SliceCenter = Rect.new(100, 100, 100, 100)
+NarcoLogin.SliceScale = 0.050
 
 LogsCloseBtn.Name = "LogsCloseBtn"
 LogsCloseBtn.Parent = LogsClose
