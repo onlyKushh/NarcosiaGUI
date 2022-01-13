@@ -1,4 +1,5 @@
 local NarcoGUI = Instance.new("ScreenGui")
+local CountdownAD = Instance.new("TextLabel")
 local NarcoMain = Instance.new("ImageLabel")
 local NarcoInScd1 = Instance.new("ImageLabel")
 local HomeBtn = Instance.new("ImageButton")
@@ -68,10 +69,24 @@ local LoginNameGradient = Instance.new("UIGradient")
 local LoginBox = Instance.new("TextBox")
 local LoginBtn = Instance.new("ImageLabel")
 local LoginSend = Instance.new("TextButton")
-local CountdownAD = Instance.new("TextLabel")
  
 NarcoGUI.Name = "NarcoGUI"
 NarcoGUI.Parent = game.CoreGui
+
+CountdownAD.Name = "CountdownAD"
+CountdownAD.Parent = NarcoMain
+CountdownAD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CountdownAD.BackgroundTransparency = 1.000
+CountdownAD.BorderColor3 = Color3.fromRGB(27, 42, 53)
+CountdownAD.BorderSizePixel = 0
+CountdownAD.Position = UDim2.new(-0.941999972, 0, -0.313333333, 0)
+CountdownAD.Size = UDim2.new(0, 40, 0, 19)
+CountdownAD.Font = Enum.Font.GothamSemibold
+CountdownAD.Text = "300"
+CountdownAD.TextColor3 = Color3.fromRGB(150, 50, 255)
+CountdownAD.TextSize = 14.000
+CountdownAD.TextStrokeColor3 = Color3.fromRGB(200, 50, 255)
+CountdownAD.Visible = false
 
 NarcoMain.Name = "NarcoMain"
 NarcoMain.Parent = NarcoGUI
@@ -843,22 +858,6 @@ LoginSend.Font = Enum.Font.GothamBold
 LoginSend.Text = "LOGIN"
 LoginSend.TextColor3 = Color3.new(0.588235, 0.196078, 1)
 LoginSend.TextSize = 19
-
-CountdownAD.Name = "CountdownAD"
-CountdownAD.Parent = NarcoMain
-CountdownAD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CountdownAD.BackgroundTransparency = 1.000
-CountdownAD.BorderColor3 = Color3.fromRGB(27, 42, 53)
-CountdownAD.BorderSizePixel = 0
-CountdownAD.Position = UDim2.new(-0.941999972, 0, -0.313333333, 0)
-CountdownAD.Size = UDim2.new(0, 40, 0, 19)
-CountdownAD.Font = Enum.Font.GothamSemibold
-CountdownAD.Text = "300"
-CountdownAD.TextColor3 = Color3.fromRGB(150, 50, 255)
-CountdownAD.TextSize = 14.000
-CountdownAD.TextStrokeColor3 = Color3.fromRGB(200, 50, 255)
-CountdownAD.Visible = false
-
 
 -- INTRODUCTION
 
