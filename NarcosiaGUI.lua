@@ -1454,7 +1454,7 @@ TPADOFF.MouseButton1Click:Connect(function()
 		if getgenv().autodrill == false then
 			return
 		else
-
+			time = 300
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1421, -14, -1652), Vector3.new(-0, -0, -1))
 			game:GetService("ReplicatedStorage").RemoteEvent.put_Drill:FireServer(unpack(autodrillargs))
 			while wait(1) do
