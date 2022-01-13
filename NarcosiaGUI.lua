@@ -1405,7 +1405,7 @@ TPADOFF.MouseButton1Click:Connect(function()
 		})
 		end
 	while getgenv().autodrill == true do
-		if getgenv().dump == false then
+		if getgenv().autodrill == false then
 			return
 		else
 
@@ -1458,7 +1458,7 @@ TPAD.MouseButton1Click:Connect(function()
 		})
 	end
 	while getgenv().autodrill == true do
-		if getgenv().dump == false then
+		if getgenv().autodrill == false then
 			return
 		else
 
