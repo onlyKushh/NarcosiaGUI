@@ -845,7 +845,7 @@ LoginSend.TextColor3 = Color3.new(0.588235, 0.196078, 1)
 LoginSend.TextSize = 19
 
 CountdownAD.Name = "CountdownAD"
-CountdownAD.Parent = game.StarterGui.NarcoGUI.NarcoMain
+CountdownAD.Parent = NarcoMain
 CountdownAD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CountdownAD.BackgroundTransparency = 1.000
 CountdownAD.BorderColor3 = Color3.fromRGB(27, 42, 53)
