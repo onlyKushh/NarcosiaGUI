@@ -688,7 +688,7 @@ Version.BackgroundTransparency = 1
 Version.Position = UDim2.new(0.386000007, 0, 0.0250000004, 0)
 Version.Size = UDim2.new(0, 40, 0, 16)
 Version.Font = Enum.Font.Code
-Version.Text = "v1.0.0.1"
+Version.Text = "v1.0.1.4"
 Version.TextColor3 = Color3.new(0.588235, 0.196078, 1)
 Version.TextSize = 14
 
