@@ -68,6 +68,7 @@ local LoginNameGradient = Instance.new("UIGradient")
 local LoginBox = Instance.new("TextBox")
 local LoginBtn = Instance.new("ImageLabel")
 local LoginSend = Instance.new("TextButton")
+local CountdownAD = Instance.new("TextLabel")
  
 NarcoGUI.Name = "NarcoGUI"
 NarcoGUI.Parent = game.CoreGui
@@ -843,6 +844,21 @@ LoginSend.Text = "LOGIN"
 LoginSend.TextColor3 = Color3.new(0.588235, 0.196078, 1)
 LoginSend.TextSize = 19
 
+CountdownAD.Name = "CountdownAD"
+CountdownAD.Parent = game.StarterGui.NarcoGUI.NarcoMain
+CountdownAD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CountdownAD.BackgroundTransparency = 1.000
+CountdownAD.BorderColor3 = Color3.fromRGB(27, 42, 53)
+CountdownAD.BorderSizePixel = 0
+CountdownAD.Position = UDim2.new(-0.941999972, 0, -0.313333333, 0)
+CountdownAD.Size = UDim2.new(0, 40, 0, 19)
+CountdownAD.Font = Enum.Font.GothamSemibold
+CountdownAD.Text = "300"
+CountdownAD.TextColor3 = Color3.fromRGB(150, 50, 255)
+CountdownAD.TextSize = 14.000
+CountdownAD.TextStrokeColor3 = Color3.fromRGB(200, 50, 255)
+CountdownAD.Visible = false
+
 
 -- INTRODUCTION
 
@@ -1390,6 +1406,9 @@ TPADOFF.MouseButton1Click:Connect(function()
 	}
 
 	getgenv().autodrill = false -- true/false | on/off
+	
+	local time = 300
+	
 
 	if getgenv().autodrill == true then
 		game.StarterGui:SetCore("SendNotification", {
@@ -1411,15 +1430,28 @@ TPADOFF.MouseButton1Click:Connect(function()
 
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1421, -14, -1652), Vector3.new(-0, -0, -1))
 			game:GetService("ReplicatedStorage").RemoteEvent.put_Drill:FireServer(unpack(autodrillargs))
-			wait(301)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1421, -14, -1652), Vector3.new(-0, -0, -1))
-			wait(2.5)
-			for i = 1, 60 do
-				wait()
-				keypress(0x45)
+			while wait(1) do
+				if time == 0 then
+					CountdownAD.Text = "0"
+					
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1421, -14, -1652), Vector3.new(-0, -0, -1))
+					wait(2.5)
+					for i = 1, 60 do
+						wait()
+						keypress(0x45)
+					end
+					wait(.5)
+					keyrelease(0x45)
+					
+					CountdownAD.Visible = false
+					break
+				else
+					CountdownAD.Visible = true
+					CountdownAD.Text = tostring(time) --sets onscreen gui timer
+					time = time - 1
+				end
 			end
-			wait(.5)
-			keyrelease(0x45)
+			
 
 		end
 		end
