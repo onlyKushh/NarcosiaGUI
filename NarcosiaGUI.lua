@@ -15,10 +15,24 @@ local HomeAFOFF = Instance.new("TextButton")
 local HomeRainAutoFarmOFF = Instance.new("ImageLabel")
 local HomeRAFOFF = Instance.new("TextButton")
 local NarcoTPIn = Instance.new("ImageLabel")
+local TPAutoDrill = Instance.new("ImageLabel")
+local TPAD = Instance.new("TextButton")
+local TPAutoDrillOFF = Instance.new("ImageLabel")
+local TPADOFF = Instance.new("TextButton")
 local NarcoSettingsIn = Instance.new("ImageLabel")
 local NarcoCredits = Instance.new("TextLabel")
 local NarcocrGradient = Instance.new("UIGradient")
 local NarcoPlayerIn = Instance.new("ImageLabel")
+local BGSliderSpeed = Instance.new("Frame")
+local Fire = Instance.new("BoolValue")
+local Max = Instance.new("TextButton")
+local Bar = Instance.new("Frame")
+local TextControl = Instance.new("TextBox")
+local SliderSpeedText = Instance.new("TextLabel")
+local PlayerNoclip = Instance.new("ImageLabel")
+local PlayerNC = Instance.new("TextButton")
+local PlayerFly = Instance.new("ImageLabel")
+local PlayerF = Instance.new("TextButton")
 local NarcoName = Instance.new("TextLabel")
 local NarcoNameGradient = Instance.new("UIGradient")
 local NarcoNameArrow1 = Instance.new("ImageLabel")
@@ -36,7 +50,7 @@ local NarcoNameArrow10 = Instance.new("ImageLabel")
 local NarcoNameArrow13 = Instance.new("ImageLabel")
 local NarcoNameArrow14 = Instance.new("ImageLabel")
 local NarcoChangelogs = Instance.new("ImageLabel")
-local NarcoName_2 = Instance.new("TextLabel")
+local NarcoCLText = Instance.new("TextLabel")
 local NarcoLogsWave = Instance.new("ImageLabel")
 local NarcoChangelogsIn = Instance.new("ImageLabel")
 local Version = Instance.new("TextLabel")
@@ -244,6 +258,50 @@ NarcoTPIn.ScaleType = Enum.ScaleType.Slice
 NarcoTPIn.SliceCenter = Rect.new(100, 100, 100, 100)
 NarcoTPIn.SliceScale = 0.020
 
+TPAutoDrill.Name = "TPAutoDrill"
+TPAutoDrill.Parent = NarcoTPIn
+TPAutoDrill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TPAutoDrill.BackgroundTransparency = 1.000
+TPAutoDrill.Position = UDim2.new(0.357777774, 0, 0.525331259, 0)
+TPAutoDrill.Size = UDim2.new(0, 128, 0, 30)
+TPAutoDrill.Image = "rbxassetid://3570695787"
+TPAutoDrill.ImageColor3 = Color3.fromRGB(30, 30, 30)
+TPAutoDrill.ScaleType = Enum.ScaleType.Slice
+TPAutoDrill.SliceCenter = Rect.new(100, 100, 100, 100)
+TPAutoDrill.SliceScale = 0.030
+
+TPAD.Name = "TPAD"
+TPAD.Parent = TPAutoDrill
+TPAD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TPAD.BackgroundTransparency = 1.000
+TPAD.Size = UDim2.new(0, 128, 0, 30)
+TPAD.Font = Enum.Font.Gotham
+TPAD.Text = "AUTODRILL"
+TPAD.TextColor3 = Color3.fromRGB(150, 50, 255)
+TPAD.TextSize = 14.000
+
+TPAutoDrillOFF.Name = "TPAutoDrillOFF"
+TPAutoDrillOFF.Parent = NarcoTPIn
+TPAutoDrillOFF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TPAutoDrillOFF.BackgroundTransparency = 1.000
+TPAutoDrillOFF.Position = UDim2.new(0.453333318, 0, 0.69269532, 0)
+TPAutoDrillOFF.Size = UDim2.new(0, 41, 0, 30)
+TPAutoDrillOFF.Image = "rbxassetid://3570695787"
+TPAutoDrillOFF.ImageColor3 = Color3.fromRGB(30, 30, 30)
+TPAutoDrillOFF.ScaleType = Enum.ScaleType.Slice
+TPAutoDrillOFF.SliceCenter = Rect.new(100, 100, 100, 100)
+TPAutoDrillOFF.SliceScale = 0.030
+
+TPADOFF.Name = "TPADOFF"
+TPADOFF.Parent = TPAutoDrillOFF
+TPADOFF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TPADOFF.BackgroundTransparency = 1.000
+TPADOFF.Size = UDim2.new(0, 41, 0, 30)
+TPADOFF.Font = Enum.Font.Gotham
+TPADOFF.Text = "OFF"
+TPADOFF.TextColor3 = Color3.fromRGB(150, 50, 255)
+TPADOFF.TextSize = 14.000
+
 NarcoSettingsIn.Name = "NarcoSettingsIn"
 NarcoSettingsIn.Parent = NarcoMain
 NarcoSettingsIn.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -289,6 +347,104 @@ NarcoPlayerIn.ImageColor3 = Color3.new(0.156863, 0.156863, 0.156863)
 NarcoPlayerIn.ScaleType = Enum.ScaleType.Slice
 NarcoPlayerIn.SliceCenter = Rect.new(100, 100, 100, 100)
 NarcoPlayerIn.SliceScale = 0.020
+
+BGSliderSpeed.Name = "BGSliderSpeed"
+BGSliderSpeed.Parent = NarcoPlayerIn
+BGSliderSpeed.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+BGSliderSpeed.BorderColor3 = Color3.fromRGB(53, 53, 53)
+BGSliderSpeed.BorderSizePixel = 0
+BGSliderSpeed.Position = UDim2.new(0.204444438, 0, 0.0376569033, 0)
+BGSliderSpeed.Size = UDim2.new(0, 266, 0, 105)
+
+Fire.Name = "Fire"
+Fire.Parent = Max
+Fire.Value = false
+
+
+Max.Name = "Max"
+Max.Parent = BGSliderSpeed
+Max.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Max.BorderSizePixel = 0
+Max.Position = UDim2.new(0.0526315793, 0, 0.292421192, 0)
+Max.Size = UDim2.new(0, 237, 0, 12)
+Max.AutoButtonColor = false
+Max.Font = Enum.Font.SourceSans
+Max.Text = ""
+Max.TextColor3 = Color3.fromRGB(0, 0, 0)
+Max.TextSize = 14.000
+
+Bar.Name = "Bar"
+Bar.Parent = Max
+Bar.BackgroundColor3 = Color3.fromRGB(150, 50, 255)
+Bar.BorderSizePixel = 0
+Bar.Size = UDim2.new(0, 45, 0, 12)
+
+TextControl.Name = "TextControl"
+TextControl.Parent = BGSliderSpeed
+TextControl.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextControl.BorderSizePixel = 0
+TextControl.Position = UDim2.new(0.419999987, 0, 0.600000024, 0)
+TextControl.Size = UDim2.new(0, 50, 0, 20)
+TextControl.Font = Enum.Font.GothamSemibold
+TextControl.PlaceholderColor3 = Color3.fromRGB(82, 27, 140)
+TextControl.Text = "16"
+TextControl.TextColor3 = Color3.fromRGB(150, 50, 255)
+TextControl.TextSize = 14.000
+
+SliderSpeedText.Name = "SliderSpeedText"
+SliderSpeedText.Parent = BGSliderSpeed
+SliderSpeedText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SliderSpeedText.BackgroundTransparency = 1.000
+SliderSpeedText.Position = UDim2.new(0.308270663, 0, 0.0285714287, 0)
+SliderSpeedText.Size = UDim2.new(0, 102, 0, 30)
+SliderSpeedText.Font = Enum.Font.GothamSemibold
+SliderSpeedText.Text = "WalkSpeed"
+SliderSpeedText.TextColor3 = Color3.fromRGB(150, 50, 255)
+SliderSpeedText.TextSize = 18.000
+
+PlayerNoclip.Name = "PlayerNoclip"
+PlayerNoclip.Parent = NarcoPlayerIn
+PlayerNoclip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerNoclip.BackgroundTransparency = 1.000
+PlayerNoclip.Position = UDim2.new(0.106666647, 0, 0.609013259, 0)
+PlayerNoclip.Size = UDim2.new(0, 128, 0, 30)
+PlayerNoclip.Image = "rbxassetid://3570695787"
+PlayerNoclip.ImageColor3 = Color3.fromRGB(30, 30, 30)
+PlayerNoclip.ScaleType = Enum.ScaleType.Slice
+PlayerNoclip.SliceCenter = Rect.new(100, 100, 100, 100)
+PlayerNoclip.SliceScale = 0.030
+
+PlayerNC.Name = "PlayerNC"
+PlayerNC.Parent = PlayerNoclip
+PlayerNC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerNC.BackgroundTransparency = 1.000
+PlayerNC.Size = UDim2.new(0, 128, 0, 30)
+PlayerNC.Font = Enum.Font.Gotham
+PlayerNC.Text = "NO CLIP"
+PlayerNC.TextColor3 = Color3.fromRGB(150, 50, 255)
+PlayerNC.TextSize = 14.000
+
+PlayerFly.Name = "PlayerFly"
+PlayerFly.Parent = NarcoPlayerIn
+PlayerFly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerFly.BackgroundTransparency = 1.000
+PlayerFly.Position = UDim2.new(0.606666684, 0, 0.609013259, 0)
+PlayerFly.Size = UDim2.new(0, 128, 0, 30)
+PlayerFly.Image = "rbxassetid://3570695787"
+PlayerFly.ImageColor3 = Color3.fromRGB(30, 30, 30)
+PlayerFly.ScaleType = Enum.ScaleType.Slice
+PlayerFly.SliceCenter = Rect.new(100, 100, 100, 100)
+PlayerFly.SliceScale = 0.030
+
+PlayerF.Name = "PlayerF"
+PlayerF.Parent = PlayerFly
+PlayerF.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerF.BackgroundTransparency = 1.000
+PlayerF.Size = UDim2.new(0, 128, 0, 30)
+PlayerF.Font = Enum.Font.Gotham
+PlayerF.Text = "FLY"
+PlayerF.TextColor3 = Color3.fromRGB(150, 50, 255)
+PlayerF.TextSize = 14.000
 
 NarcoName.Name = "NarcoName"
 NarcoName.Parent = NarcoMain
@@ -475,17 +631,17 @@ NarcoChangelogs.ScaleType = Enum.ScaleType.Slice
 NarcoChangelogs.SliceCenter = Rect.new(100, 100, 100, 100)
 NarcoChangelogs.SliceScale = 0.040
 
-NarcoName_2.Name = "NarcoName"
-NarcoName_2.Parent = NarcoChangelogs
-NarcoName_2.BackgroundColor3 = Color3.new(1, 1, 1)
-NarcoName_2.BackgroundTransparency = 1
-NarcoName_2.BorderSizePixel = 0
-NarcoName_2.Position = UDim2.new(0.00617377739, 0, -0.00241685193, 0)
-NarcoName_2.Size = UDim2.new(0, 200, 0, 50)
-NarcoName_2.Font = Enum.Font.GothamBold
-NarcoName_2.Text = "CHANGELOGS"
-NarcoName_2.TextColor3 = Color3.new(0.588235, 0.196078, 1)
-NarcoName_2.TextSize = 25
+NarcoCLText.Name = "NarcoName"
+NarcoCLText.Parent = NarcoChangelogs
+NarcoCLText.BackgroundColor3 = Color3.new(1, 1, 1)
+NarcoCLText.BackgroundTransparency = 1
+NarcoCLText.BorderSizePixel = 0
+NarcoCLText.Position = UDim2.new(0.00617377739, 0, -0.00241685193, 0)
+NarcoCLText.Size = UDim2.new(0, 200, 0, 50)
+NarcoCLText.Font = Enum.Font.GothamBold
+NarcoCLText.Text = "CHANGELOGS"
+NarcoCLText.TextColor3 = Color3.new(0.588235, 0.196078, 1)
+NarcoCLText.TextSize = 25
 
 NarcoLogsWave.Name = "NarcoLogsWave"
 NarcoLogsWave.Parent = NarcoChangelogs
@@ -687,12 +843,17 @@ LoginSend.Text = "LOGIN"
 LoginSend.TextColor3 = Color3.new(0.588235, 0.196078, 1)
 LoginSend.TextSize = 19
 
+
+-- INTRODUCTION
+
 local rs = game:GetService("RunService")
 
 local TweenService = game:GetService("TweenService")
 
 wait(0.5)
+NarcoLogin.SliceScale = 50
 NarcoLogin:TweenSize(UDim2.new(0, 254, 0, 100), "In", "Quad", 0.5, true)
+TweenService:Create(NarcoLogin, TweenInfo.new(1), {SliceScale = 0.05}):Play()
 wait(1)
 TweenService:Create(LoginName, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
 TweenService:Create(LoginBox, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
@@ -703,7 +864,7 @@ wait(0.5)
 LoginBtn:TweenPosition(UDim2.new(0.498, 0, 1.276, 0), "In", "Quad", 0.5, true)
 LoginBtn.Visible = true
 
-
+-- VERIFY KEY
 
 local Player = game:GetService("Players").LocalPlayer
 
@@ -978,18 +1139,23 @@ end)
 HomeAF.MouseButton1Click:Connect(function()
 	
 	TweenService:Create(HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+	TweenService:Create(HomeAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	wait(0.3)
+	HomeAF.TextColor3 = Color3.fromRGB(0, 255, 128)
+	HomeAFOFF.TextColor3 = Color3.fromRGB(150, 50, 255)
+	
 	getgenv().dump = true -- true/false | on/off
 
 	if getgenv().dump == true then
 		game.StarterGui:SetCore("SendNotification", {
-			Title = "Activated",
-			Text = "Can't deactivate atm x)",
+			Title = "Auto Farm",
+			Text = "Activated",
 			Duration = 3
 		})
 	else
 		game.StarterGui:SetCore("SendNotification", {
-			Title = "Deactivated",
-			Text = "Autofarm Has Been Turned To False",
+			Title = "Auto Farm",
+			Text = "Deactivated",
 			Duration = 3
 		})
 	end
@@ -1040,19 +1206,22 @@ end)
 HomeRAF.MouseButton1Click:Connect(function()
 
 	TweenService:Create(HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+	TweenService:Create(HomeRAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	wait(0.3)
 	HomeRAF.TextColor3 = Color3.fromRGB(0, 255, 128)
+	HomeRAFOFF.TextColor3 = Color3.fromRGB(150, 50, 255)
 	getgenv().rain = true -- true/false | on/off
 
 	if getgenv().rain == true then
 		game.StarterGui:SetCore("SendNotification", {
-			Title = "Activated",
-			Text = "Can't deactivate atm x)",
+			Title = "Rain Auto Farm",
+			Text = "Activated",
 			Duration = 3
 		})
 	else
 		game.StarterGui:SetCore("SendNotification", {
-			Title = "Deactivated",
-			Text = "Autofarm Has Been Turned To False",
+			Title = "Rain Auto Farm",
+			Text = "Deactivated",
 			Duration = 3
 		})
 	end
@@ -1098,6 +1267,8 @@ end)
 HomeRAFOFF.MouseButton1Click:Connect(function()
 
 	TweenService:Create(HomeRAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+	TweenService:Create(HomeRAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	wait(0.3)
 	HomeRAF.TextColor3 = Color3.fromRGB(150, 50, 255)
 	HomeRAFOFF.TextColor3 = Color3.fromRGB(0, 255, 128)
 
@@ -1105,13 +1276,23 @@ HomeRAFOFF.MouseButton1Click:Connect(function()
 
 	if getgenv().rain == true then
 		game.StarterGui:SetCore("SendNotification", {
-			Title = "Dump Simulator Autofarm",
-			Text = "Autofarm Has Been Turned To True",
+			Title = "RAF OFF",
+			Text = "OFF",
 			Duration = 3
 		})
-		while getgenv().rain == true do
-			for i, v in pairs(game:GetService("Workspace")["rain_drop"]:GetChildren()) do
-				wait()
+	else
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Rain Auto Farm",
+			Text = "Deactivated",
+			Duration = 3
+		})
+	end
+	while getgenv().rain == true do
+		for i, v in pairs(game:GetService("Workspace")["rain_drop"]:GetChildren()) do
+			wait()
+			if getgenv().rain == false then
+				return
+			else
 
 				if v:IsA("MeshPart") then
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame + Vector3.new(5, 5, 5)
@@ -1146,21 +1327,23 @@ end)
 HomeAFOFF.MouseButton1Click:Connect(function()
 
 	TweenService:Create(HomeAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
-	HomeRAF.TextColor3 = Color3.fromRGB(150, 50, 255)
+	TweenService:Create(HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	wait(0.3)
+	HomeAF.TextColor3 = Color3.fromRGB(150, 50, 255)
 	HomeAFOFF.TextColor3 = Color3.fromRGB(0, 255, 128)
 
 	getgenv().dump = false -- true/false | on/off
 
 	if getgenv().dump == true then
 		game.StarterGui:SetCore("SendNotification", {
-			Title = "Activated",
-			Text = "Can't deactivate atm x)",
+			Title = "Auto Farm",
+			Text = "Activated",
 			Duration = 3
 		})
 	else
 		game.StarterGui:SetCore("SendNotification", {
-			Title = "Deactivated",
-			Text = "Autofarm Has Been Turned To False",
+			Title = "Auto Farm",
+			Text = "Deactivated",
 			Duration = 3
 		})
 	end
@@ -1187,6 +1370,340 @@ HomeAFOFF.MouseButton1Click:Connect(function()
 				end
 			end
 		end
+	end
+
+end)
+
+TPADOFF.MouseButton1Click:Connect(function()
+
+	TweenService:Create(TPADOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+	TweenService:Create(TPAD, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	wait(0.3)
+	TPAD.TextColor3 = Color3.fromRGB(150, 50, 255)
+	TPADOFF.TextColor3 = Color3.fromRGB(0, 255, 128)
+
+	local autodrillargs = {
+		[1] = workspace.drilling_area.drills.drilling_machine_lvl4,
+		[2] = CFrame.new(Vector3.new(1421.4626464844, -11.502075195312, -1646.3845214844), Vector3.new(-0, -0, -1)),
+		[3] = workspace.drilling_area.areas.Part,
+		[4] = game:GetService("Players").LocalPlayer
+	}
+
+	getgenv().autodrill = false -- true/false | on/off
+
+	if getgenv().autodrill == true then
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Auto Drill",
+			Text = "Activated",
+			Duration = 3
+		})
+	else
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Auto Drill",
+			Text = "Deactivated",
+			Duration = 3
+		})
+		end
+	while getgenv().autodrill == true do
+		if getgenv().dump == false then
+			return
+		else
+
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1421, -14, -1652), Vector3.new(-0, -0, -1))
+			game:GetService("ReplicatedStorage").RemoteEvent.put_Drill:FireServer(unpack(autodrillargs))
+			wait(301)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1421, -14, -1652), Vector3.new(-0, -0, -1))
+			wait(2.5)
+			for i = 1, 60 do
+				wait()
+				keypress(0x45)
+			end
+			wait(.5)
+			keyrelease(0x45)
+
+		end
+		end
+
+
+end)
+
+TPAD.MouseButton1Click:Connect(function()
+
+	TweenService:Create(TPAD, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+	TweenService:Create(TPADOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
+	wait(0.3)
+	TPADOFF.TextColor3 = Color3.fromRGB(150, 50, 255)
+	TPAD.TextColor3 = Color3.fromRGB(0, 255, 128)
+
+	local autodrillargs = {
+		[1] = workspace.drilling_area.drills.drilling_machine_lvl4,
+		[2] = CFrame.new(Vector3.new(1421.4626464844, -11.502075195312, -1646.3845214844), Vector3.new(-0, -0, -1)),
+		[3] = workspace.drilling_area.areas.Part,
+		[4] = game:GetService("Players").LocalPlayer
+	}
+
+	getgenv().autodrill = true -- true/false | on/off
+
+	if getgenv().autodrill == true then
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Auto Drill",
+			Text = "Activated",
+			Duration = 3
+		})
+	else
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Auto Drill",
+			Text = "Deactivated",
+			Duration = 3
+		})
+	end
+	while getgenv().autodrill == true do
+		if getgenv().dump == false then
+			return
+		else
+
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1421, -14, -1652), Vector3.new(-0, -0, -1))
+			game:GetService("ReplicatedStorage").RemoteEvent.put_Drill:FireServer(unpack(autodrillargs))
+			wait(301)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1421, -14, -1652), Vector3.new(-0, -0, -1))
+			wait(2.5)
+			for i = 1, 60 do
+				wait()
+				keypress(0x45)
+			end
+			wait(.5)
+			keyrelease(0x45)
+
+		end
+	end
+
+
+end)
+
+PlayerNC.MouseButton1Click:Connect(function()
+
+	TweenService:Create(PlayerNC, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+	wait(0.3)
+	PlayerNC.TextColor3 = Color3.fromRGB(0, 255, 128)
+
+	 local noclip = false
+	game:GetService('RunService').Stepped:connect(function()
+		if noclip then
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		end
+	end)
+	local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+	mouse.KeyDown:connect(function(KeyCode)
+
+		if KeyCode.KeyCode == Enum.KeyCode.RightAlt then
+			noclip = not noclip
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		end
+	end)
+	print('Loaded')
+	print('Press "E" to noclip')
+
+
+end)
+
+PlayerF.MouseButton1Click:Connect(function()
+
+	TweenService:Create(PlayerF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
+	wait(0.3)
+	PlayerF.TextColor3 = Color3.fromRGB(0, 255, 128)
+	
+	repeat wait()
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+	local mouse = game.Players.LocalPlayer:GetMouse()
+	repeat wait() until mouse
+	local plr = game.Players.LocalPlayer
+	local torso = plr.Character.Torso
+	local flying = true
+	local deb = true
+	local ctrl = {f = 0, b = 0, l = 0, r = 0}
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+	local maxspeed = 50
+	local speed = 0
+
+	function Fly()
+		local bg = Instance.new("BodyGyro", torso)
+		bg.P = 9e4
+		bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		bg.cframe = torso.CFrame
+		local bv = Instance.new("BodyVelocity", torso)
+		bv.velocity = Vector3.new(0,0.1,0)
+		bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+		repeat wait()
+			plr.Character.Humanoid.PlatformStand = true
+			if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+				speed = speed+.5+(speed/maxspeed)
+				if speed > maxspeed then
+					speed = maxspeed
+				end
+			elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+				speed = speed-1
+				if speed < 0 then
+					speed = 0
+				end
+			end
+			if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+				lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+			elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+			else
+				bv.velocity = Vector3.new(0,0.1,0)
+			end
+			bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+		until not flying
+		ctrl = {f = 0, b = 0, l = 0, r = 0}
+		lastctrl = {f = 0, b = 0, l = 0, r = 0}
+		speed = 0
+		bg:Destroy()
+		bv:Destroy()
+		plr.Character.Humanoid.PlatformStand = false
+	end
+	mouse.KeyDown:connect(function(key)
+		if key:lower() == "m" then
+			if flying then flying = false
+			else
+				flying = true
+				Fly()
+			end
+		elseif key:lower() == "w" then
+			ctrl.f = 1
+		elseif key:lower() == "s" then
+			ctrl.b = -1
+		elseif key:lower() == "a" then
+			ctrl.l = -1
+		elseif key:lower() == "d" then
+			ctrl.r = 1
+		end
+	end)
+	mouse.KeyUp:connect(function(key)
+		if key:lower() == "w" then
+			ctrl.f = 0
+		elseif key:lower() == "s" then
+			ctrl.b = 0
+		elseif key:lower() == "a" then
+			ctrl.l = 0
+		elseif key:lower() == "d" then
+			ctrl.r = 0
+		end
+	end)
+	Fly()
+
+
+end)
+
+
+
+
+local max = Max
+local fire = Fire
+local bar = Bar
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+local uis = game:GetService("UserInputService")
+local ap = Vector2.new(max.AbsolutePosition.X, max.AbsolutePosition.Y)
+local as = Vector2.new(max.AbsoluteSize.X, max.AbsoluteSize.Y)
+local x = mouse.X
+local down = false --if MouseButton1 is down or not
+
+
+max.MouseButton1Down:Connect(function()
+
+	bar.Size = UDim2.new(0, (mouse.X - ap.X), 1, 0) --where ever we click, the bar's size changes to reach the position
+	fire.Value = true
+	down = true
+
+end)
+
+uis.InputEnded:Connect(function(input, gp)
+
+	if input.UserInputType == Enum.UserInputType.MouseButton1 then
+
+		down = false
+		fire.Value = false
+
+	end
+
+end)
+
+
+mouse.Move:Connect(function()
+
+	if down == true then --if true, then this represents the mouse being dragged
+
+		fire.Value = false 
+		fire.Value = true
+
+		if mouse.X < ap.X then --out of bounds (to the left)
+
+			bar.Size = UDim2.new(0, 0, 1, 0)
+
+		elseif mouse.X > (ap.X + as.X) then --out of bounds (to the right)
+
+			bar.Size = UDim2.new(0, as.X, 1, 0)
+
+		else --within bounds
+
+			bar.Size = UDim2.new(0, (mouse.X - ap.X), 1, 0)
+
+		end
+
+	end
+
+end)
+
+local textB = TextControl
+local frame = BGSliderSpeed
+local max = Max
+local fire = Fire
+local bar = Bar
+local as = Vector2.new(max.AbsoluteSize.X, max.AbsoluteSize.Y)
+
+fire.Changed:Connect(function() --this is where the false-true question's answer is!
+
+	if fire.Value == true then
+
+		local maxSize = as.X
+		local size = bar.Size.X.Offset
+		local num = 100 * (size / maxSize) --100 because that is the range we want it to be in
+
+		textB.Text = math.floor(num) --to round off any of those good ol' decimals
+
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = num
+
+
+
+	end
+
+end)
+
+
+textB.FocusLost:Connect(function() --we used FocusLost because this is basically when the player hits "Enter" to finalize their decision
+
+	if typeof(tonumber(textB.Text)) == "number" then -- if text inside of the TextBox is actually a number
+
+		local num = tonumber(textB.Text)
+
+		if num >= 0 and num <= 100 then
+
+			bar.Size = UDim2.new(0, ((num / 100) * as.X), 1, 0)
+
+		else
+
+			textB.Text = "100"
+
+		end
+
+	else -- if the text is NOT a number
+
+		textB.Text = "Invalid"
+
 	end
 
 end)
