@@ -69,7 +69,7 @@ local LoginNameGradient = Instance.new("UIGradient")
 local LoginBox = Instance.new("TextBox")
 local LoginBtn = Instance.new("ImageLabel")
 local LoginSend = Instance.new("TextButton")
- 
+
 NarcoGUI.Name = "NarcoGUI"
 NarcoGUI.Parent = game.CoreGui
 
@@ -773,6 +773,7 @@ LogsClose.Position = UDim2.new(-0.217434779, 0, 1.07639468, 0)
 LogsClose.Size = UDim2.new(0, 25, 0, 25)
 LogsClose.Image = "rbxassetid://3570695787"
 LogsClose.ImageColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+LogsClose.SliceCenter = 0.050
 
 LogsCloseBtn.Name = "LogsCloseBtn"
 LogsCloseBtn.Parent = LogsClose
@@ -913,10 +914,10 @@ end)
 -- HOME BUTTON
 
 HomeBtn.MouseEnter:Connect(function()
-	
+
 	TweenService:Create(HomeBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(160, 100, 255)}):Play()
 	HomeBtn:TweenSize(UDim2.new(0, 16, 0, 16), "In", "Quad", 0.1, true)
-	
+
 end)
 
 HomeBtn.MouseLeave:Connect(function()
@@ -1032,7 +1033,7 @@ end)
 PlayerBtn.MouseButton1Down:Connect(function()
 
 	TweenService:Create(PlayerBtn, TweenInfo.new(0.3), {ImageColor3 = Color3.fromRGB(85, 0, 125)}):Play()
-	
+
 end)
 
 -- LOGS CLOSE BUTTON
@@ -1152,13 +1153,13 @@ HomeAF.MouseLeave:Connect(function()
 end)
 
 HomeAF.MouseButton1Click:Connect(function()
-	
+
 	TweenService:Create(HomeAF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
 	TweenService:Create(HomeAFOFF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(150, 50, 255)}):Play()
 	wait(0.3)
 	HomeAF.TextColor3 = Color3.fromRGB(0, 255, 128)
 	HomeAFOFF.TextColor3 = Color3.fromRGB(150, 50, 255)
-	
+
 	getgenv().dump = true -- true/false | on/off
 
 	if getgenv().dump == true then
@@ -1259,7 +1260,7 @@ HomeRAF.MouseButton1Click:Connect(function()
 			end
 		end
 	end
-			
+
 
 end)
 
@@ -1405,9 +1406,9 @@ TPADOFF.MouseButton1Click:Connect(function()
 	}
 
 	getgenv().autodrill = false -- true/false | on/off
-	
+
 	local time = 300
-	
+
 
 	if getgenv().autodrill == true then
 		game.StarterGui:SetCore("SendNotification", {
@@ -1421,7 +1422,7 @@ TPADOFF.MouseButton1Click:Connect(function()
 			Text = "Deactivated",
 			Duration = 3
 		})
-		end
+	end
 	while getgenv().autodrill == true do
 		if getgenv().autodrill == false then
 			return
@@ -1432,7 +1433,7 @@ TPADOFF.MouseButton1Click:Connect(function()
 			while wait(1) do
 				if time == 0 then
 					CountdownAD.Text = "0"
-					
+
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(1421, -14, -1652), Vector3.new(-0, -0, -1))
 					wait(2.5)
 					for i = 1, 60 do
@@ -1441,7 +1442,7 @@ TPADOFF.MouseButton1Click:Connect(function()
 					end
 					wait(.5)
 					keyrelease(0x45)
-					
+
 					CountdownAD.Visible = false
 					break
 				else
@@ -1450,10 +1451,10 @@ TPADOFF.MouseButton1Click:Connect(function()
 					time = time - 1
 				end
 			end
-			
+
 
 		end
-		end
+	end
 
 
 end)
@@ -1517,7 +1518,7 @@ PlayerNC.MouseButton1Click:Connect(function()
 	wait(0.3)
 	PlayerNC.TextColor3 = Color3.fromRGB(0, 255, 128)
 
-	 local noclip = false
+	local noclip = false
 	game:GetService('RunService').Stepped:connect(function()
 		if noclip then
 			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
@@ -1543,7 +1544,7 @@ PlayerF.MouseButton1Click:Connect(function()
 	TweenService:Create(PlayerF, TweenInfo.new(0.3), {TextColor3 = Color3.fromRGB(0, 255, 128)}):Play()
 	wait(0.3)
 	PlayerF.TextColor3 = Color3.fromRGB(0, 255, 128)
-	
+
 	repeat wait()
 	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
 	local mouse = game.Players.LocalPlayer:GetMouse()
@@ -1789,7 +1790,7 @@ local poson =  UDim2.new(0, NarcoMain.AbsolutePosition.X, 0, NarcoMain.AbsoluteP
 local UIS =game:GetService("UserInputService")
 
 UIS.InputBegan:Connect(function(KeyCode)
-	
+
 	if KeyCode.KeyCode == Enum.KeyCode.Insert then
 		if on then
 			narcomainkey:TweenPosition((poson), "Out", "Quad", 0.15, true)
@@ -1799,7 +1800,7 @@ UIS.InputBegan:Connect(function(KeyCode)
 			on = true
 		end
 	end
-	
+
 end)
 
 
