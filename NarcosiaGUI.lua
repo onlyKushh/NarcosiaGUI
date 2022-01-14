@@ -1024,12 +1024,13 @@ NarcoLogin.SliceScale = 50
 NarcoLogin.Size = UDim2.new(0, 0, 0, 0)
 NarcoLogin:TweenSize(UDim2.new(0, 100, 0, 100), "Out", "Back", 1, true)
 wait(1)
-Circle.Visible = true
-TweenService:Create(LeftBG_2, TweenInfo.new(0.6), {ImageTransparency = 0}):Play()
-TweenService:Create(LeftBG_3, TweenInfo.new(0.6), {ImageTransparency = 0}):Play()
+
 progressBar()
 wait(0.6)
 
+TweenService:Create(LeftBG_2, TweenInfo.new(0.6), {ImageTransparency = 0}):Play()
+TweenService:Create(LeftBG_3, TweenInfo.new(0.6), {ImageTransparency = 0}):Play()
+Circle.Visible = true
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
 wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
