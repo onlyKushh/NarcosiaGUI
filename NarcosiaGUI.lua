@@ -894,7 +894,7 @@ Circle.BackgroundTransparency = 1.000
 Circle.BorderSizePixel = 0
 Circle.Position = UDim2.new(0.49972561, 0, 0.49974823, 0)
 Circle.Size = UDim2.new(0.150000006, 0, 0.5, 0)
-Circle.Visible = false
+Circle.Visible = true
 
 LeftBG.Name = "LeftBG"
 LeftBG.Parent = Circle
@@ -1026,50 +1026,50 @@ NarcoLogin:TweenSize(UDim2.new(0, 100, 0, 100), "Out", "Back", 1, true)
 wait(1)
 TweenService:Create(LeftBG_2, TweenInfo.new(0.6), {ImageTransparency = 0}):Play()
 TweenService:Create(LeftBG_3, TweenInfo.new(0.6), {ImageTransparency = 0}):Play()
-wait(0.3)
+wait(0.6)
 progressBar()
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
 wait(0.6)
 N.Text = "A"
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
 wait(0.6)
 N.Text = "R"
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
 wait(0.6)
 N.Text = "C"
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
 wait(0.6)
 N.Text = "O"
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
 wait(0.6)
 N.Text = "S"
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
 wait(0.6)
 N.Text = "I"
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
 wait(0.6)
 N.Text = "A"
-wait(0.3)
+wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
 N.Visible = false
 TweenService:Create(LeftBG_2, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
