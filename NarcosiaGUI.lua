@@ -1027,8 +1027,9 @@ wait(1)
 Circle.Visible = true
 TweenService:Create(LeftBG_2, TweenInfo.new(0.6), {ImageTransparency = 0}):Play()
 TweenService:Create(LeftBG_3, TweenInfo.new(0.6), {ImageTransparency = 0}):Play()
-wait(0.6)
 progressBar()
+wait(0.6)
+
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
 wait(0.6)
 TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
