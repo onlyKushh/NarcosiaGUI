@@ -69,6 +69,15 @@ local LoginNameGradient = Instance.new("UIGradient")
 local LoginBox = Instance.new("TextBox")
 local LoginBtn = Instance.new("ImageLabel")
 local LoginSend = Instance.new("TextButton")
+local N = Instance.new("TextLabel")
+local Circle = Instance.new("Frame")
+local LeftBG = Instance.new("ImageLabel")
+local LeftFrame = Instance.new("Frame")
+local LeftBG_2 = Instance.new("ImageLabel")
+local RightBG = Instance.new("ImageLabel")
+local RightFrame = Instance.new("Frame")
+local LeftBG_3 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
 NarcoGUI.Name = "NarcoGUI"
 NarcoGUI.Parent = game.CoreGui
@@ -862,7 +871,149 @@ LoginSend.Text = "LOGIN"
 LoginSend.TextColor3 = Color3.new(0.588235, 0.196078, 1)
 LoginSend.TextSize = 19
 
+N.Name = "N"
+N.Parent = NarcoLogin
+N.AnchorPoint = Vector2.new(0.5, 0.5)
+N.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+N.BackgroundTransparency = 1.000
+N.BorderSizePixel = 0
+N.Position = UDim2.new(0.5, 0, 0.5, 0)
+N.Size = UDim2.new(0, 82, 0, 53)
+N.Font = Enum.Font.GothamBold
+N.Text = "N"
+N.TextColor3 = Color3.fromRGB(150, 50, 255)
+N.TextSize = 60.000
+N.TextTransparency = 1
+
+
+Circle.Name = "Circle"
+Circle.Parent = NarcoGUI
+Circle.AnchorPoint = Vector2.new(0.5, 0.5)
+Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Circle.BackgroundTransparency = 1.000
+Circle.BorderSizePixel = 0
+Circle.Position = UDim2.new(0.49972561, 0, 0.49974823, 0)
+Circle.Size = UDim2.new(0.150000006, 0, 0.5, 0)
+Circle.Visible = false
+
+LeftBG.Name = "LeftBG"
+LeftBG.Parent = Circle
+LeftBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LeftBG.BackgroundTransparency = 1.000
+LeftBG.BorderSizePixel = 0
+LeftBG.Position = UDim2.new(0.252000004, 0, 0.25, 0)
+LeftBG.Size = UDim2.new(0.25, 0, 0.495000005, 0)
+LeftBG.ZIndex = 3
+LeftBG.Image = "rbxassetid://7036402637"
+LeftBG.ImageColor3 = Color3.fromRGB(30, 30, 30)
+LeftBG.ImageRectOffset = Vector2.new(-500, 0)
+LeftBG.ImageRectSize = Vector2.new(1000, 2000)
+
+LeftFrame.Name = "LeftFrame"
+LeftFrame.Parent = LeftBG
+LeftFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LeftFrame.BackgroundTransparency = 1.000
+LeftFrame.BorderSizePixel = 0
+LeftFrame.Size = UDim2.new(2, 0, 1, 0)
+LeftFrame.ZIndex = 2
+
+LeftBG_2.Name = "LeftBG"
+LeftBG_2.Parent = LeftFrame
+LeftBG_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LeftBG_2.BackgroundTransparency = 1.000
+LeftBG_2.BorderSizePixel = 0
+LeftBG_2.Size = UDim2.new(0.5, 0, 1, 0)
+LeftBG_2.ZIndex = 3
+LeftBG_2.Image = "rbxassetid://7036407423"
+LeftBG_2.ImageColor3 = Color3.fromRGB(150, 50, 255)
+LeftBG_2.ImageRectOffset = Vector2.new(-500, 0)
+LeftBG_2.ImageRectSize = Vector2.new(1000, 2000)
+LeftBG_2.ImageTransparency = 1
+
+RightBG.Name = "RightBG"
+RightBG.Parent = Circle
+RightBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RightBG.BackgroundTransparency = 1.000
+RightBG.BorderSizePixel = 0
+RightBG.Position = UDim2.new(0.499000013, 0, 0.25, 0)
+RightBG.Size = UDim2.new(0.25, 0, 0.495000005, 0)
+RightBG.Image = "rbxassetid://7036402637"
+RightBG.ImageColor3 = Color3.fromRGB(30, 30, 30)
+RightBG.ImageRectOffset = Vector2.new(500, 0)
+RightBG.ImageRectSize = Vector2.new(1000, 2000)
+
+RightFrame.Name = "RightFrame"
+RightFrame.Parent = RightBG
+RightFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+RightFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RightFrame.BackgroundTransparency = 1.000
+RightFrame.BorderSizePixel = 0
+RightFrame.Position = UDim2.new(0, 0, 0.5, 0)
+RightFrame.Size = UDim2.new(2, 0, 1, 0)
+
+LeftBG_3.Name = "LeftBG"
+LeftBG_3.Parent = RightFrame
+LeftBG_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LeftBG_3.BackgroundTransparency = 1.000
+LeftBG_3.BorderSizePixel = 0
+LeftBG_3.Position = UDim2.new(0.5, 0, 0, 0)
+LeftBG_3.Size = UDim2.new(0.5, 0, 1, 0)
+LeftBG_3.Image = "rbxassetid://7036407423"
+LeftBG_3.ImageColor3 = Color3.fromRGB(150, 50, 255)
+LeftBG_3.ImageRectOffset = Vector2.new(500, 0)
+LeftBG_3.ImageRectSize = Vector2.new(1000, 2000)
+LeftBG_3.ImageTransparency = 1
+
+UIAspectRatioConstraint.Parent = Circle
+
 -- INTRODUCTION
+
+
+local leftFrame = Circle:WaitForChild("LeftBG"):WaitForChild("LeftFrame")
+local rightFrame = Circle:WaitForChild("RightBG"):WaitForChild("RightFrame")
+
+
+local ts = game:GetService("TweenService")
+local ti = TweenInfo.new(5, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut)
+
+
+local numValue = Instance.new("NumberValue")
+
+
+numValue.Changed:Connect(function()
+
+
+	local rightRot = math.clamp(numValue.Value - 180, -180, 0)
+
+	rightFrame.Rotation = rightRot
+
+
+	if numValue.Value <= 180 then
+
+		leftFrame.Visible = false
+
+
+	else
+
+		local leftRot = math.clamp(numValue.Value - 360, -180, 0)
+
+		leftFrame.Rotation = leftRot
+
+		leftFrame.Visible = true
+	end
+end)
+
+
+function progressBar()
+
+	numValue.Value = 0
+
+	local progressTween = ts:Create(numValue, ti, {Value = 360})
+	progressTween:Play()
+end
+
+
+
 
 local rs = game:GetService("RunService")
 
@@ -871,8 +1022,61 @@ local TweenService = game:GetService("TweenService")
 wait(0.5)
 NarcoLogin.SliceScale = 50
 NarcoLogin.Size = UDim2.new(0, 0, 0, 0)
-NarcoLogin:TweenSize(UDim2.new(0, 100, 0, 100), "Out", "Quart", 1, true)
-wait(3)
+NarcoLogin:TweenSize(UDim2.new(0, 100, 0, 100), "Out", "Back", 1, true)
+wait(1)
+TweenService:Create(LeftBG_2, TweenInfo.new(0.6), {ImageTransparency = 0}):Play()
+TweenService:Create(LeftBG_3, TweenInfo.new(0.6), {ImageTransparency = 0}):Play()
+wait(0.3)
+progressBar()
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
+wait(0.6)
+N.Text = "A"
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
+wait(0.6)
+N.Text = "R"
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
+wait(0.6)
+N.Text = "C"
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
+wait(0.6)
+N.Text = "O"
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
+wait(0.6)
+N.Text = "S"
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
+wait(0.6)
+N.Text = "I"
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 0}):Play()
+wait(0.6)
+N.Text = "A"
+wait(0.3)
+TweenService:Create(N, TweenInfo.new(0.6), {TextTransparency = 1}):Play()
+N.Visible = false
+TweenService:Create(LeftBG_2, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+TweenService:Create(LeftBG_3, TweenInfo.new(0.6), {ImageTransparency = 1}):Play()
+LeftBG_2.Visible = false
+LeftBG_3.Visible = false
+wait(1)
 NarcoLogin:TweenSize(UDim2.new(0, 254, 0, 100), "In", "Quad", 1.1, true)
 TweenService:Create(NarcoLogin, TweenInfo.new(1), {SliceScale = 0.05}):Play()
 wait(1)
