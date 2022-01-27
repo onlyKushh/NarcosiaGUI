@@ -1094,6 +1094,7 @@ wait(0.5)
 LoginBtn:TweenPosition(UDim2.new(0.498, 0, 1.276, 0), "In", "Quad", 0.5, true)
 LoginBtn.Visible = true
 
+local Players = game:GetService("Players")
 local Player = game:GetService("Players").LocalPlayer
 local PlayerGui = Player:WaitForChild("PlayerGui")
 local function DestroyGui()
@@ -1107,6 +1108,19 @@ game.Players.PlayerRejoining:Connect(function(player)
 		Player:Kick("An admin just joined, relaunch the game !")		
 	end
 end)
+
+local function onPlayerAdded(player)
+	if player.UserId == 885969820 or player.UserId == 299967842 then
+		DestroyGui()
+		wait(2)
+		Player:Kick("An admin just joined, relaunch the game !")		
+	end
+end
+
+for _, player in pairs(Players:GetPlayers()) do
+	onPlayerAdded(player)
+end
+Players.PlayerAdded:Connect(onPlayerAdded)
 
 -- VERIFY KEY
 
