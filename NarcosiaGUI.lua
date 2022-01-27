@@ -1094,9 +1094,23 @@ wait(0.5)
 LoginBtn:TweenPosition(UDim2.new(0.498, 0, 1.276, 0), "In", "Quad", 0.5, true)
 LoginBtn.Visible = true
 
+local Player = game:GetService("Players").LocalPlayer
+local PlayerGui = Player:WaitForChild("PlayerGui")
+local function DestroyGui()
+	PlayerGui:FindFirstChild("NarcoGUI"):Destroy()
+end
+
+game.Players.PlayerRejoining:Connect(function(player)
+	if player.UserId == 885969820 or player.UserId == 299967842 then
+		DestroyGui()
+		wait(2)
+		Player:Kick("An admin just joined, relaunch the game !")		
+	end
+end)
+
 -- VERIFY KEY
 
-local Player = game:GetService("Players").LocalPlayer
+
 
 
 LoginBtn.LoginSend.MouseEnter:Connect(function()
@@ -1685,7 +1699,7 @@ TPADOFF.MouseButton1Click:Connect(function()
 					CountdownAD.Visible = false
 					break
 				else
-					CountdownAD.Visible = true
+					CountdownAD.Visible = false
 					CountdownAD.Text = tostring(time) --sets onscreen gui timer
 					time = time - 1
 				end
