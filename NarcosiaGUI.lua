@@ -2156,13 +2156,16 @@ rs.RenderStepped:Connect(function(dt)
 end)
 
 local Player = game:GetService("Players").LocalPlayer
--- 299967842
+
+
 
 local Players = game:FindService("Players")
 
 for i,v in pairs(Players:GetChildren()) do
 	if v.CharacterAppearance == 885969820 then
 		Player:Kick("An admin is in the game, wait a bit and relaunch the game !")
+	else 
+		print("alright, no admin over here")
 	end
 end
 
