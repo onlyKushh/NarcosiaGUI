@@ -2156,7 +2156,6 @@ rs.RenderStepped:Connect(function(dt)
 end)
 
 local Player = game:GetService("Players").LocalPlayer
-
 -- 299967842
 
 local Players = game:FindService("Players")
