@@ -1094,17 +1094,6 @@ wait(0.5)
 LoginBtn:TweenPosition(UDim2.new(0.498, 0, 1.276, 0), "In", "Quad", 0.5, true)
 LoginBtn.Visible = true
 
-local Players = game:GetService("Players")
-local Player = game:GetService("Players").LocalPlayer
-local PlayerGui = Player:WaitForChild("PlayerGui")
-
-
-game.Players.PlayerRejoining:Connect(function(player)
-	if player.UserId == 885969820 or player.UserId == 299967842 then
-		Player:Kick("An admin just joined, relaunch the game !")		
-	end
-end)
-
 -- VERIFY KEY
 
 
@@ -2166,6 +2155,23 @@ rs.RenderStepped:Connect(function(dt)
 	end
 end)
 
+local Player = game:GetService("Players").LocalPlayer
+
+
+--game.Players.PlayerRejoining:Connect(function(player)
+--	if player.UserId == 885969820 or player.UserId == 299967842 then
+--		Player:Kick("An admin just joined, relaunch the game !")		
+--	end
+--end)
+
+local Players = game:FindService("Players")
+
+for i,v in pairs(Players:GetChildren()) do
+	if v.CharacterAppearance == 885969820 or 299967842 then
+		Player:Kick("An admin just joined, relaunch the game !")
+	end
+end
+
 -- ARROW ANIMATION --
 
 while true do 
@@ -2213,3 +2219,5 @@ while true do
 	TweenService:Create(NarcoNameArrow1, TweenInfo.new(0.3), {ImageTransparency = 0}):Play()
 	wait(0.075)
 end
+
+
