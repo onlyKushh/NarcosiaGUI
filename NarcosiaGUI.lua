@@ -2157,12 +2157,8 @@ end)
 
 local Player = game:GetService("Players").LocalPlayer
 
+-- 299967842
 
---game.Players.PlayerRejoining:Connect(function(player)
---	if player.UserId == 885969820 or player.UserId == 299967842 then
---		Player:Kick("An admin just joined, relaunch the game !")		
---	end
---end)
 
 local Players = game:FindService("Players")
 
